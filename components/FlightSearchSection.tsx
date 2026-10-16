@@ -40,20 +40,114 @@ export interface AirportOption {
   country: string
 }
 
-const popularAirports: AirportOption[] = [
+const flightAirports: AirportOption[] = [
   { code: "DEL", city: "Delhi", airport: "Indira Gandhi International Airport (VIP FBO Terminal)", country: "India" },
   { code: "BOM", city: "Mumbai", airport: "Chhatrapati Shivaji Maharaj Intl (General Aviation Terminal)", country: "India" },
   { code: "GOI", city: "Goa", airport: "Dabolim / Mopa International Airport (GOX)", country: "India" },
   { code: "BLR", city: "Bengaluru", airport: "Kempegowda International Airport (GA Facility)", country: "India" },
   { code: "HYD", city: "Hyderabad", airport: "Rajiv Gandhi International Airport (VIP Hangar)", country: "India" },
   { code: "AMD", city: "Ahmedabad", airport: "Sardar Vallabhbhai Patel Intl Airport", country: "India" },
-  { code: "DXB", city: "Dubai", airport: "Al Maktoum International / Dubai Executive (DWC)", country: "UAE" },
-  { code: "MLE", city: "Maldives", airport: "Velana International Airport, Malé", country: "Maldives" },
   { code: "JAI", city: "Jaipur", airport: "Jaipur International Airport (VIP Lounge)", country: "India" },
   { code: "CCU", city: "Kolkata", airport: "Netaji Subhash Chandra Bose Intl", country: "India" },
-  { code: "DED", city: "Dehradun", airport: "Jolly Grant Airport (Sahastradhara Helipad)", country: "India" },
-  { code: "KED", city: "Kedarnath", airport: "Kedarnath Temple Helipad (Mandakini Valley)", country: "India" },
+  { code: "DXB", city: "Dubai", airport: "Al Maktoum International / Dubai Executive (DWC)", country: "UAE" },
+  { code: "MLE", city: "Maldives", airport: "Velana International Airport, Malé", country: "Maldives" },
 ]
+
+const joyrideAirportsFrom: AirportOption[] = [
+  { code: "VAJJ", city: "Mumbai (Juhu)", airport: "Juhu Aerodrome Coastal Runway Base", country: "India" },
+  { code: "BOM", city: "Mumbai (CSMIA)", airport: "Kalina General Aviation VIP Terminal", country: "India" },
+  { code: "GOX", city: "Goa (Mopa)", airport: "Goa Coastal Aerial Tour Base", country: "India" },
+]
+
+const joyrideAirportsTo: AirportOption[] = [
+  { code: "SKYLN", city: "Mumbai Coastal Loop", airport: "30-Min Non-Landing Skyline & Sea Link Aerial Tour", country: "India" },
+  { code: "GOA-SEA", city: "Goa Coastal Aerial", airport: "45-Min Beaches & Fort Aguada Aerial Circuit", country: "India" },
+]
+
+const yatraAirportsFrom: AirportOption[] = [
+  { code: "DED", city: "Dehradun", airport: "Sahastradhara Helipad Base (VIP Yatra Launch)", country: "India" },
+  { code: "DEL", city: "Delhi (FBO)", airport: "Indira Gandhi Intl Airport (VIP Charter Gate)", country: "India" },
+  { code: "HRD", city: "Haridwar", airport: "Haridwar Bypass Helipad", country: "India" },
+]
+
+const yatraAirportsTo: AirportOption[] = [
+  { code: "KED", city: "Kedarnath Dham", airport: "Kedarnath Temple Helipad (Mandakini Valley)", country: "India" },
+  { code: "BAD", city: "Badrinath Dham", airport: "Badrinath Helipad Base", country: "India" },
+  { code: "CHAR", city: "Char Dham Circuit", airport: "Yamunotri, Gangotri, Kedarnath & Badrinath VIP Heli", country: "India" },
+  { code: "PHT", city: "Phata Base", airport: "Phata Kedarnath Heli-Hub", country: "India" },
+]
+
+const ambulanceAirports: AirportOption[] = [
+  { code: "DEL", city: "Delhi (AIIMS/Medanta)", airport: "DEL VIP Tarmac ➔ 45-Min Bed-to-Bed Launch", country: "India" },
+  { code: "BOM", city: "Mumbai (Kokilaben)", airport: "BOM Kalina FBO ➔ Critical Care Air Ambulance", country: "India" },
+  { code: "BLR", city: "Bengaluru (Manipal)", airport: "BLR Kempegowda Intl ICU Launch Hangar", country: "India" },
+  { code: "HYD", city: "Hyderabad (Apollo)", airport: "HYD Begumpet / RGIA GA Terminal", country: "India" },
+  { code: "CCU", city: "Kolkata (Apollo)", airport: "CCU Netaji Subhash Chandra Bose Intl", country: "India" },
+  { code: "MAA", city: "Chennai (Apollo)", airport: "MAA Chennai International Airport", country: "India" },
+  { code: "AMD", city: "Ahmedabad (Zydus)", airport: "AMD Sardar Vallabhbhai Patel Intl", country: "India" },
+]
+
+export const liveEmptyLegDeals = [
+  {
+    id: "EL-801",
+    fromCity: "Mumbai",
+    fromCode: "BOM",
+    fromAirport: "Kalina General Aviation VIP Terminal",
+    toCity: "Goa",
+    toCode: "GOX",
+    toAirport: "Mopa International General Aviation",
+    date: "Tomorrow • 11:00 AM",
+    duration: "55m nonstop",
+    aircraft: "Hawker 900XP",
+    category: "Midsize Jet",
+    seats: 8,
+    regularPrice: "₹6,80,000",
+    dealPrice: "₹2,20,000",
+    discountPercent: "70% OFF",
+    statusTag: "Ready for Departure",
+    image: "/assets/images/flight-charter.jpg"
+  },
+  {
+    id: "EL-802",
+    fromCity: "New Delhi",
+    fromCode: "DEL",
+    fromAirport: "Indira Gandhi Intl Airport (VIP FBO Terminal)",
+    toCity: "Mumbai",
+    toCode: "BOM",
+    toAirport: "Chhatrapati Shivaji Maharaj GA Hangar",
+    date: "17 Oct • 16:30 PM",
+    duration: "1h 55m nonstop",
+    aircraft: "Cessna Citation XLS+",
+    category: "Midsize Jet",
+    seats: 9,
+    regularPrice: "₹8,50,000",
+    dealPrice: "₹3,10,000",
+    discountPercent: "65% OFF",
+    statusTag: "Confirmed Repositioning",
+    image: "/assets/images/hero-jet.jpg"
+  },
+  {
+    id: "EL-803",
+    fromCity: "Dehradun",
+    fromCode: "DED",
+    fromAirport: "Sahastradhara Helipad Base",
+    toCity: "Phata Base",
+    toCode: "PHT",
+    toAirport: "Kedarnath Route Heli-Hub",
+    date: "18 Oct • 07:30 AM",
+    duration: "35m flight",
+    aircraft: "Bell 407 Dual Engine",
+    category: "Helicopter Shuttle",
+    seats: 6,
+    regularPrice: "₹2,90,000",
+    dealPrice: "₹1,25,000",
+    discountPercent: "60% OFF",
+    statusTag: "Himalayan Repositioning",
+    image: "/assets/images/cabin-interior.jpg"
+  }
+]
+
+const popularAirports: AirportOption[] = flightAirports
 
 interface MatchedAircraft {
   id: string
@@ -287,7 +381,12 @@ function CustomDateSelector({ isOpen, onClose, selectedDate, onSelectDate, minDa
   )
 }
 
-export function FlightSearchSection() {
+interface FlightSearchSectionProps {
+  className?: string
+  hideTopBanner?: boolean
+}
+
+export function FlightSearchSection({ className = "", hideTopBanner = false }: FlightSearchSectionProps = {}) {
   // Service category tabs (matching the top of IndiGo screenshot)
   const [activeCategory, setActiveCategory] = React.useState<"flights" | "joyrides" | "yatra" | "ambulance" | "emptyLegs">("flights")
   
@@ -350,37 +449,63 @@ export function FlightSearchSection() {
     setToAirport(temp)
   }
 
-  // Handle Tab Switch Actions (Prefills appropriate routes & aircrafts)
+  // Dynamic airport pool based on type selection
+  const currentPoolFrom = React.useMemo(() => {
+    if (activeCategory === "joyrides") return joyrideAirportsFrom
+    if (activeCategory === "yatra") return yatraAirportsFrom
+    if (activeCategory === "ambulance") return ambulanceAirports
+    return flightAirports
+  }, [activeCategory])
+
+  const currentPoolTo = React.useMemo(() => {
+    if (activeCategory === "joyrides") return joyrideAirportsTo
+    if (activeCategory === "yatra") return yatraAirportsTo
+    if (activeCategory === "ambulance") return ambulanceAirports
+    return flightAirports
+  }, [activeCategory])
+
+  // Handle Tab Switch Actions (Prefills appropriate routes & aircrafts, disables fields)
   const handleCategorySwitch = (catId: "flights" | "joyrides" | "yatra" | "ambulance" | "emptyLegs") => {
     setActiveCategory(catId)
+    setHasSearched(false)
+    setIsSelectingFrom(false)
+    setIsSelectingTo(false)
+
     if (catId === "joyrides") {
-      setFromAirport(popularAirports[1]) // Mumbai
-      setToAirport({ code: "SKYLN", city: "Mumbai Skyline", airport: "Juhu Aerodrome ➔ Coastal Aerial Flight", country: "India" })
+      setTripType("oneway")
+      setFromAirport(joyrideAirportsFrom[0]) // Mumbai Juhu
+      setToAirport(joyrideAirportsTo[0]) // Mumbai Coastal Loop
       setAircraftPreference("Scenic Tourer (Cirrus SR22 / Cessna 172)")
       setPassengers(2)
+      setSelectedOffer("VIP FBO Fast-Track")
     } else if (catId === "yatra") {
-      setFromAirport(popularAirports[10] || popularAirports[0]) // Dehradun or Delhi
-      setToAirport(popularAirports[11] || { code: "KED", city: "Kedarnath", airport: "Kedarnath Temple Helipad", country: "India" })
-      setAircraftPreference("VIP Helicopter Shuttle (Bell 407 / Airbus H130)")
+      setTripType("roundtrip")
+      setFromAirport(yatraAirportsFrom[0]) // Dehradun Sahastradhara
+      setToAirport(yatraAirportsTo[0]) // Kedarnath Temple Helipad
+      setAircraftPreference("VIP Helicopter (Airbus H130 / Bell 407)")
       setPassengers(2)
+      setSelectedOffer("VIP FBO Fast-Track")
     } else if (catId === "ambulance") {
-      setFromAirport(popularAirports[0]) // Delhi
-      setToAirport(popularAirports[1]) // Mumbai
-      setAircraftPreference("Critical Care ICU Jet (King Air 200)")
+      setTripType("oneway")
+      setFromAirport(ambulanceAirports[0]) // Delhi AIIMS/Medanta
+      setToAirport(ambulanceAirports[1]) // Mumbai Kokilaben
+      setAircraftPreference("Critical Care ICU Jet (King Air B200 / PC-24)")
+      setPassengers(2)
       setSelectedOffer("VIP FBO Fast-Track")
     } else if (catId === "emptyLegs") {
-      // Scroll to empty legs section or open flash deals
-      const el = document.getElementById("empty-legs")
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" })
-      } else {
-        setIsDealsSidebarOpen(true)
-      }
+      setTripType("oneway")
+      setDepartureDate("") // Null date / flexible
+      setAircraftPreference("All Repositioning Fleet (Up to 70% Off)")
+      setSelectedOffer("Empty Leg Special")
     } else {
       // Default Private Flights
-      setFromAirport(popularAirports[0]) // Delhi
-      setToAirport(popularAirports[1]) // Mumbai
+      setTripType("oneway")
+      setFromAirport(flightAirports[0]) // Delhi
+      setToAirport(flightAirports[1]) // Mumbai
+      setDepartureDate("2026-10-16")
       setAircraftPreference("Midsize Jet (Up to 8 Pax)")
+      setPassengers(2)
+      setSelectedOffer("VIP FBO Fast-Track")
     }
   }
 
@@ -410,36 +535,38 @@ export function FlightSearchSection() {
     return d.toLocaleDateString("en-US", { day: "numeric", month: "short" })
   }
 
-  const filteredAirportsFrom = popularAirports.filter(a => 
+  const filteredAirportsFrom = currentPoolFrom.filter(a => 
     a.city.toLowerCase().includes(searchFilterFrom.toLowerCase()) || 
     a.code.toLowerCase().includes(searchFilterFrom.toLowerCase()) ||
     a.airport.toLowerCase().includes(searchFilterFrom.toLowerCase())
   )
 
-  const filteredAirportsTo = popularAirports.filter(a => 
+  const filteredAirportsTo = currentPoolTo.filter(a => 
     a.city.toLowerCase().includes(searchFilterTo.toLowerCase()) || 
     a.code.toLowerCase().includes(searchFilterTo.toLowerCase()) ||
     a.airport.toLowerCase().includes(searchFilterTo.toLowerCase())
   )
 
   return (
-    <section className="py-12 px-4 sm:px-8 xl:px-14 max-w-7xl mx-auto relative">
+    <section className={`relative max-w-7xl mx-auto ${className || "py-12 px-4 sm:px-8 xl:px-14"}`}>
       {/* ─── Top Promotion Ribbon (Inspired by screenshot "Celebrating 2 years of IndiGo BluChip") ─── */}
-      <div className="mb-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs sm:text-sm text-zinc-700 font-medium">
-        <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          <span>
-            Celebrating <strong>30+ Fleet Aircraft</strong> at Flyyo. Dedicated VIP FBO lounges &amp; 15-min tarmac boarding.
-          </span>
+      {!hideTopBanner && (
+        <div className="mb-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs sm:text-sm text-zinc-700 font-medium">
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span>
+              Celebrating <strong>30+ Fleet Aircraft</strong> at Flyyo. Dedicated VIP FBO lounges &amp; 15-min tarmac boarding.
+            </span>
+          </div>
+          <Link
+            href="/login"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-900 hover:text-black underline underline-offset-4"
+          >
+            <span>SkyClub Member Access</span>
+            <ArrowRight size={13} className="shrink-0" />
+          </Link>
         </div>
-        <Link
-          href="/login"
-          className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-900 hover:text-black underline underline-offset-4"
-        >
-          <span>SkyClub Member Access</span>
-          <ArrowRight size={13} className="shrink-0" />
-        </Link>
-      </div>
+      )}
 
       {/* ─── Main Flight Search Card Container ─── */}
       <div className="relative rounded-3xl bg-white border border-zinc-200 shadow-2xl overflow-visible transition-all duration-300">
@@ -579,324 +706,487 @@ export function FlightSearchSection() {
             <div className="grid grid-cols-1 md:grid-cols-12 border border-zinc-200 rounded-2xl overflow-visible bg-white divide-y md:divide-y-0 md:divide-x divide-zinc-200 shadow-sm relative">
               
               {/* FROM SECTION (Col span 3) */}
-              <div 
-                className="md:col-span-3 p-4 hover:bg-zinc-50/80 transition-colors cursor-pointer relative group"
-                onClick={() => { setIsSelectingFrom(!isSelectingFrom); setIsSelectingTo(false); setIsPaxModalOpen(false) }}
-              >
-                <div className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 mb-1">From</div>
-                <div className="flex items-baseline gap-1.5">
-                  <span className="text-xl sm:text-2xl font-black text-zinc-950 tracking-tight">
-                    {fromAirport.city}
-                  </span>
-                  <span className="text-xs font-bold font-mono text-zinc-600">
-                    ({fromAirport.code})
-                  </span>
+              {activeCategory === "emptyLegs" ? (
+                <div className="md:col-span-3 p-4 bg-zinc-50/70 cursor-not-allowed select-none">
+                  <div className="flex items-center justify-between text-[10px] uppercase font-bold tracking-wider text-zinc-500 mb-1">
+                    <span>From</span>
+                    <span className="text-[10px] font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-full border border-amber-300">
+                      Auto-Filtered
+                    </span>
+                  </div>
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="text-xl sm:text-2xl font-black text-zinc-950 tracking-tight">
+                      All Hubs
+                    </span>
+                    <span className="text-xs font-bold font-mono text-zinc-500">
+                      (BOM, DEL, DED)
+                    </span>
+                  </div>
+                  <p className="text-xs text-zinc-600 font-medium truncate mt-0.5">
+                    Active repositioning departure airfields
+                  </p>
                 </div>
-                <p className="text-xs text-zinc-600 font-medium truncate mt-0.5">
-                  {fromAirport.airport}
-                </p>
-
-                {/* Swap Button: Centered On The Exact Divider Line */}
-                <button
-                  type="button"
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    handleSwapAirports()
-                  }}
-                  title="Swap Origin and Destination"
-                  className="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white border border-zinc-300 hover:border-zinc-950 shadow-md items-center justify-center text-zinc-700 hover:text-zinc-950 transition-all hover:scale-110 active:rotate-180 duration-300 cursor-pointer"
+              ) : (
+                <div 
+                  className="md:col-span-3 p-4 hover:bg-zinc-50/80 transition-colors cursor-pointer relative group"
+                  onClick={() => { setIsSelectingFrom(!isSelectingFrom); setIsSelectingTo(false); setIsPaxModalOpen(false) }}
                 >
-                  <ArrowLeftRight size={13} className="shrink-0" />
-                </button>
+                  <div className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 mb-1 flex items-center justify-between">
+                    <span>From</span>
+                    {activeCategory === "joyrides" && (
+                      <span className="text-[10px] font-bold text-pink-700 bg-pink-50 px-2 py-0.5 rounded-full border border-pink-200">
+                        Joyride Base
+                      </span>
+                    )}
+                    {activeCategory === "yatra" && (
+                      <span className="text-[10px] font-bold text-orange-700 bg-orange-50 px-2 py-0.5 rounded-full border border-orange-200">
+                        Heli Gateway
+                      </span>
+                    )}
+                    {activeCategory === "ambulance" && (
+                      <span className="text-[10px] font-bold text-red-700 bg-red-50 px-2 py-0.5 rounded-full border border-red-200">
+                        ICU Airfield
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="text-xl sm:text-2xl font-black text-zinc-950 tracking-tight">
+                      {fromAirport.city}
+                    </span>
+                    <span className="text-xs font-bold font-mono text-zinc-600">
+                      ({fromAirport.code})
+                    </span>
+                  </div>
+                  <p className="text-xs text-zinc-600 font-medium truncate mt-0.5">
+                    {fromAirport.airport}
+                  </p>
 
-                {/* From Airport Picker Popover with Live Search */}
-                {isSelectingFrom && (
-                  <>
-                    <div 
-                      className="fixed inset-0 z-40 bg-transparent" 
-                      onClick={(e) => { e.stopPropagation(); setIsSelectingFrom(false) }} 
-                    />
-                    <div 
-                      data-lenis-prevent
-                      className="absolute left-0 top-full mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-zinc-200 p-3 z-50 text-zinc-900 overscroll-contain"
-                      onClick={(e) => e.stopPropagation()}
-                      onWheel={(e) => e.stopPropagation()}
-                      onTouchMove={(e) => e.stopPropagation()}
+                  {/* Swap Button: Centered On The Exact Divider Line (Only if not Joyride) */}
+                  {activeCategory !== "joyrides" && (
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        handleSwapAirports()
+                      }}
+                      title="Swap Origin and Destination"
+                      className="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white border border-zinc-300 hover:border-zinc-950 shadow-md items-center justify-center text-zinc-700 hover:text-zinc-950 transition-all hover:scale-110 active:rotate-180 duration-300 cursor-pointer"
                     >
-                      <div className="flex items-center justify-between pb-2 mb-2 border-b border-zinc-100">
-                        <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-400">
-                          Departure Airport
-                        </span>
-                        <button onClick={() => setIsSelectingFrom(false)} className="text-zinc-400 hover:text-black cursor-pointer">
-                          <X size={14} />
-                        </button>
-                      </div>
+                      <ArrowLeftRight size={13} className="shrink-0" />
+                    </button>
+                  )}
 
-                      <div className="mb-2">
-                        <input
-                          type="text"
-                          placeholder="Search city or code..."
-                          value={searchFilterFrom}
-                          onChange={(e) => setSearchFilterFrom(e.target.value)}
-                          className="w-full text-xs px-3 py-1.5 rounded-lg bg-zinc-100 border border-zinc-200 focus:outline-none focus:border-black"
-                          onClick={(e) => e.stopPropagation()}
-                        />
-                      </div>
-
+                  {/* From Airport Picker Popover with Live Search */}
+                  {isSelectingFrom && (
+                    <>
+                      <div 
+                        className="fixed inset-0 z-40 bg-transparent" 
+                        onClick={(e) => { e.stopPropagation(); setIsSelectingFrom(false) }} 
+                      />
                       <div 
                         data-lenis-prevent
-                        className="max-h-56 overflow-y-auto space-y-1 overscroll-contain pr-1"
+                        className="absolute left-0 top-full mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-zinc-200 p-3 z-50 text-zinc-900 overscroll-contain"
+                        onClick={(e) => e.stopPropagation()}
                         onWheel={(e) => e.stopPropagation()}
                         onTouchMove={(e) => e.stopPropagation()}
                       >
-                        {filteredAirportsFrom.map((item) => (
-                          <div
-                            key={`from-${item.code}`}
-                            onClick={() => { setFromAirport(item); setIsSelectingFrom(false); setSearchFilterFrom("") }}
-                            className={`p-2.5 rounded-xl hover:bg-zinc-100 cursor-pointer flex items-center justify-between transition-colors ${
-                              fromAirport.code === item.code ? "bg-zinc-100 font-bold" : ""
-                            }`}
-                          >
-                            <div>
-                              <div className="text-xs font-bold text-zinc-900">{item.city} ({item.code})</div>
-                              <div className="text-[10px] text-zinc-600 truncate max-w-[190px]">{item.airport}</div>
+                        <div className="flex items-center justify-between pb-2 mb-2 border-b border-zinc-100">
+                          <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-400">
+                            {activeCategory === "yatra" ? "Pilgrimage Launch Helipad" : activeCategory === "joyrides" ? "Joyride Runway Base" : "Departure Airport"}
+                          </span>
+                          <button onClick={() => setIsSelectingFrom(false)} className="text-zinc-400 hover:text-black cursor-pointer">
+                            <X size={14} />
+                          </button>
+                        </div>
+
+                        <div className="mb-2">
+                          <input
+                            type="text"
+                            placeholder="Search city or code..."
+                            value={searchFilterFrom}
+                            onChange={(e) => setSearchFilterFrom(e.target.value)}
+                            className="w-full text-xs px-3 py-1.5 rounded-lg bg-zinc-100 border border-zinc-200 focus:outline-none focus:border-black"
+                            onClick={(e) => e.stopPropagation()}
+                          />
+                        </div>
+
+                        <div 
+                          data-lenis-prevent
+                          className="max-h-56 overflow-y-auto space-y-1 overscroll-contain pr-1"
+                          onWheel={(e) => e.stopPropagation()}
+                          onTouchMove={(e) => e.stopPropagation()}
+                        >
+                          {filteredAirportsFrom.map((item) => (
+                            <div
+                              key={`from-${item.code}`}
+                              onClick={() => { setFromAirport(item); setIsSelectingFrom(false); setSearchFilterFrom("") }}
+                              className={`p-2.5 rounded-xl hover:bg-zinc-100 cursor-pointer flex items-center justify-between transition-colors ${
+                                fromAirport.code === item.code ? "bg-zinc-100 font-bold" : ""
+                              }`}
+                            >
+                              <div>
+                                <div className="text-xs font-bold text-zinc-900">{item.city} ({item.code})</div>
+                                <div className="text-[10px] text-zinc-600 truncate max-w-[190px]">{item.airport}</div>
+                              </div>
+                              <span className="text-xs font-mono font-bold text-zinc-600">{item.code}</span>
                             </div>
-                            <span className="text-xs font-mono font-bold text-zinc-600">{item.code}</span>
-                          </div>
-                        ))}
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  </>
-                )}
-              </div>
+                    </>
+                  )}
+                </div>
+              )}
 
               {/* Mobile-Only Swap Button Strip */}
-              <div className="md:hidden flex justify-center py-1.5 bg-zinc-50 border-y border-zinc-200">
-                <button
-                  type="button"
-                  onClick={handleSwapAirports}
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-zinc-300 text-xs font-bold text-zinc-800 shadow-sm active:rotate-180 transition-transform"
-                >
-                  <ArrowLeftRight size={13} />
-                  <span>Swap Cities</span>
-                </button>
-              </div>
+              {activeCategory !== "emptyLegs" && activeCategory !== "joyrides" && (
+                <div className="md:hidden flex justify-center py-1.5 bg-zinc-50 border-y border-zinc-200">
+                  <button
+                    type="button"
+                    onClick={handleSwapAirports}
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-zinc-300 text-xs font-bold text-zinc-800 shadow-sm active:rotate-180 transition-transform"
+                  >
+                    <ArrowLeftRight size={13} />
+                    <span>Swap Cities</span>
+                  </button>
+                </div>
+              )}
 
               {/* TO SECTION (Col span 3) */}
-              <div 
-                className="md:col-span-3 p-4 hover:bg-zinc-50/80 transition-colors cursor-pointer relative"
-                onClick={() => { setIsSelectingTo(!isSelectingTo); setIsSelectingFrom(false); setIsPaxModalOpen(false) }}
-              >
-                <div className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 mb-1">To</div>
-                <div className="flex items-baseline gap-1.5">
-                  <span className="text-xl sm:text-2xl font-black text-zinc-950 tracking-tight">
-                    {toAirport.city}
-                  </span>
-                  <span className="text-xs font-bold font-mono text-zinc-600">
-                    ({toAirport.code})
-                  </span>
+              {activeCategory === "emptyLegs" ? (
+                <div className="md:col-span-3 p-4 bg-zinc-50/70 cursor-not-allowed select-none">
+                  <div className="flex items-center justify-between text-[10px] uppercase font-bold tracking-wider text-zinc-500 mb-1">
+                    <span>To</span>
+                    <span className="text-[10px] font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-full border border-amber-300">
+                      Auto-Filtered
+                    </span>
+                  </div>
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="text-xl sm:text-2xl font-black text-zinc-950 tracking-tight">
+                      All Sectors
+                    </span>
+                    <span className="text-xs font-bold font-mono text-zinc-500">
+                      (GOX, BOM, PHT)
+                    </span>
+                  </div>
+                  <p className="text-xs text-zinc-600 font-medium truncate mt-0.5">
+                    Live repositioning arrival destinations
+                  </p>
                 </div>
-                <p className="text-xs text-zinc-600 font-medium truncate mt-0.5">
-                  {toAirport.airport}
-                </p>
+              ) : activeCategory === "joyrides" ? (
+                <div className="md:col-span-3 p-4 bg-zinc-50/70 cursor-not-allowed select-none">
+                  <div className="flex items-center justify-between text-[10px] uppercase font-bold tracking-wider text-zinc-500 mb-1">
+                    <span>To</span>
+                    <span className="text-[10px] font-bold text-pink-700 bg-pink-50 px-2 py-0.5 rounded-full border border-pink-200">
+                      Aerial Loop
+                    </span>
+                  </div>
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="text-xl sm:text-2xl font-black text-zinc-950 tracking-tight">
+                      {toAirport.city}
+                    </span>
+                  </div>
+                  <p className="text-xs text-zinc-600 font-medium truncate mt-0.5">
+                    {toAirport.airport}
+                  </p>
+                </div>
+              ) : (
+                <div 
+                  className="md:col-span-3 p-4 hover:bg-zinc-50/80 transition-colors cursor-pointer relative"
+                  onClick={() => { setIsSelectingTo(!isSelectingTo); setIsSelectingFrom(false); setIsPaxModalOpen(false) }}
+                >
+                  <div className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 mb-1 flex items-center justify-between">
+                    <span>To</span>
+                    {activeCategory === "yatra" && (
+                      <span className="text-[10px] font-bold text-orange-700 bg-orange-50 px-2 py-0.5 rounded-full border border-orange-200">
+                        Sacred Shrine
+                      </span>
+                    )}
+                    {activeCategory === "ambulance" && (
+                      <span className="text-[10px] font-bold text-red-700 bg-red-50 px-2 py-0.5 rounded-full border border-red-200">
+                        Hospital Base
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="text-xl sm:text-2xl font-black text-zinc-950 tracking-tight">
+                      {toAirport.city}
+                    </span>
+                    <span className="text-xs font-bold font-mono text-zinc-600">
+                      ({toAirport.code})
+                    </span>
+                  </div>
+                  <p className="text-xs text-zinc-600 font-medium truncate mt-0.5">
+                    {toAirport.airport}
+                  </p>
 
-                {/* To Airport Picker Popover with Live Search */}
-                {isSelectingTo && (
-                  <>
-                    <div 
-                      className="fixed inset-0 z-40 bg-transparent" 
-                      onClick={(e) => { e.stopPropagation(); setIsSelectingTo(false) }} 
-                    />
-                    <div 
-                      data-lenis-prevent
-                      className="absolute left-0 top-full mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-zinc-200 p-3 z-50 text-zinc-900 overscroll-contain"
-                      onClick={(e) => e.stopPropagation()}
-                      onWheel={(e) => e.stopPropagation()}
-                      onTouchMove={(e) => e.stopPropagation()}
-                    >
-                      <div className="flex items-center justify-between pb-2 mb-2 border-b border-zinc-100">
-                        <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-400">
-                          Destination Airport
-                        </span>
-                        <button onClick={() => setIsSelectingTo(false)} className="text-zinc-400 hover:text-black cursor-pointer">
-                          <X size={14} />
-                        </button>
-                      </div>
-
-                      <div className="mb-2">
-                        <input
-                          type="text"
-                          placeholder="Search city or code..."
-                          value={searchFilterTo}
-                          onChange={(e) => setSearchFilterTo(e.target.value)}
-                          className="w-full text-xs px-3 py-1.5 rounded-lg bg-zinc-100 border border-zinc-200 focus:outline-none focus:border-black"
-                          onClick={(e) => e.stopPropagation()}
-                        />
-                      </div>
-
+                  {/* To Airport Picker Popover with Live Search */}
+                  {isSelectingTo && (
+                    <>
+                      <div 
+                        className="fixed inset-0 z-40 bg-transparent" 
+                        onClick={(e) => { e.stopPropagation(); setIsSelectingTo(false) }} 
+                      />
                       <div 
                         data-lenis-prevent
-                        className="max-h-56 overflow-y-auto space-y-1 overscroll-contain pr-1"
+                        className="absolute left-0 top-full mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-zinc-200 p-3 z-50 text-zinc-900 overscroll-contain"
+                        onClick={(e) => e.stopPropagation()}
                         onWheel={(e) => e.stopPropagation()}
                         onTouchMove={(e) => e.stopPropagation()}
                       >
-                        {filteredAirportsTo.map((item) => (
-                          <div
-                            key={`to-${item.code}`}
-                            onClick={() => { setToAirport(item); setIsSelectingTo(false); setSearchFilterTo("") }}
-                            className={`p-2.5 rounded-xl hover:bg-zinc-100 cursor-pointer flex items-center justify-between transition-colors ${
-                              toAirport.code === item.code ? "bg-zinc-100 font-bold" : ""
-                            }`}
-                          >
-                            <div>
-                              <div className="text-xs font-bold text-zinc-900">{item.city} ({item.code})</div>
-                              <div className="text-[10px] text-zinc-600 truncate max-w-[190px]">{item.airport}</div>
+                        <div className="flex items-center justify-between pb-2 mb-2 border-b border-zinc-100">
+                          <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-400">
+                            {activeCategory === "yatra" ? "Select Shrine Helipad" : "Destination Airport"}
+                          </span>
+                          <button onClick={() => setIsSelectingTo(false)} className="text-zinc-400 hover:text-black cursor-pointer">
+                            <X size={14} />
+                          </button>
+                        </div>
+
+                        <div className="mb-2">
+                          <input
+                            type="text"
+                            placeholder="Search city or code..."
+                            value={searchFilterTo}
+                            onChange={(e) => setSearchFilterTo(e.target.value)}
+                            className="w-full text-xs px-3 py-1.5 rounded-lg bg-zinc-100 border border-zinc-200 focus:outline-none focus:border-black"
+                            onClick={(e) => e.stopPropagation()}
+                          />
+                        </div>
+
+                        <div 
+                          data-lenis-prevent
+                          className="max-h-56 overflow-y-auto space-y-1 overscroll-contain pr-1"
+                          onWheel={(e) => e.stopPropagation()}
+                          onTouchMove={(e) => e.stopPropagation()}
+                        >
+                          {filteredAirportsTo.map((item) => (
+                            <div
+                              key={`to-${item.code}`}
+                              onClick={() => { setToAirport(item); setIsSelectingTo(false); setSearchFilterTo("") }}
+                              className={`p-2.5 rounded-xl hover:bg-zinc-100 cursor-pointer flex items-center justify-between transition-colors ${
+                                toAirport.code === item.code ? "bg-zinc-100 font-bold" : ""
+                              }`}
+                            >
+                              <div>
+                                <div className="text-xs font-bold text-zinc-900">{item.city} ({item.code})</div>
+                                <div className="text-[10px] text-zinc-600 truncate max-w-[190px]">{item.airport}</div>
+                              </div>
+                              <span className="text-xs font-mono font-bold text-zinc-600">{item.code}</span>
                             </div>
-                            <span className="text-xs font-mono font-bold text-zinc-600">{item.code}</span>
-                          </div>
-                        ))}
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  </>
-                )}
-              </div>
+                    </>
+                  )}
+                </div>
+              )}
 
               {/* DEPARTURE DATE (Col span 2) - Custom Date Picker Trigger */}
-              <div 
-                className="md:col-span-2 p-4 hover:bg-zinc-50/80 transition-colors cursor-pointer"
-                onClick={() => { setDatePickerTarget("departure"); setIsDatePickerOpen(true) }}
-              >
-                <div className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 mb-1 flex items-center justify-between">
-                  <span>Departure</span>
-                  <CalendarIcon size={12} className="text-zinc-500" />
+              {activeCategory === "emptyLegs" ? (
+                <div className="md:col-span-2 p-4 bg-zinc-50/70 cursor-not-allowed select-none">
+                  <div className="text-[10px] uppercase font-bold tracking-wider text-zinc-500 mb-1 flex items-center justify-between">
+                    <span>Departure</span>
+                    <Clock size={12} className="text-amber-500" />
+                  </div>
+                  <div className="text-xl sm:text-2xl font-black text-zinc-950 tracking-tight">
+                    Flexible / Live
+                  </div>
+                  <div className="text-xs text-zinc-600 font-medium mt-0.5">
+                    Today &amp; Upcoming 7 Days
+                  </div>
                 </div>
-                <div className="text-xl sm:text-2xl font-black text-zinc-950 tracking-tight">
-                  {getFormattedDate(departureDate)}
+              ) : (
+                <div 
+                  className="md:col-span-2 p-4 hover:bg-zinc-50/80 transition-colors cursor-pointer"
+                  onClick={() => { setDatePickerTarget("departure"); setIsDatePickerOpen(true) }}
+                >
+                  <div className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 mb-1 flex items-center justify-between">
+                    <span>Departure</span>
+                    <CalendarIcon size={12} className="text-zinc-500" />
+                  </div>
+                  <div className="text-xl sm:text-2xl font-black text-zinc-950 tracking-tight">
+                    {getFormattedDate(departureDate)}
+                  </div>
+                  <div className="flex items-center justify-between text-xs text-zinc-600 font-medium mt-0.5">
+                    <span>{getDayOfWeek(departureDate)}</span>
+                    <span className="text-[10px] text-zinc-400 font-semibold">Select ▾</span>
+                  </div>
                 </div>
-                <div className="flex items-center justify-between text-xs text-zinc-600 font-medium mt-0.5">
-                  <span>{getDayOfWeek(departureDate)}</span>
-                  <span className="text-[10px] text-zinc-400 font-semibold">Select ▾</span>
-                </div>
-              </div>
+              )}
 
               {/* RETURN DATE (Col span 2) - Custom Date Picker Trigger */}
-              <div 
-                className={`md:col-span-2 p-4 transition-colors cursor-pointer ${
-                  tripType === "oneway" ? "bg-zinc-50/50 hover:bg-zinc-100/70" : "hover:bg-zinc-50/80"
-                }`}
-                onClick={() => { 
-                  if (tripType === "oneway") setTripType("roundtrip")
-                  setDatePickerTarget("return")
-                  setIsDatePickerOpen(true)
-                }}
-              >
-                <div className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 mb-1 flex items-center justify-between">
-                  <span>Return</span>
-                  <CalendarCheck size={12} className="text-zinc-500" />
-                </div>
-                {tripType === "roundtrip" ? (
-                  <>
-                    <div className="text-xl sm:text-2xl font-black text-zinc-950 tracking-tight">
-                      {getFormattedDate(returnDate)}
-                    </div>
-                    <div className="flex items-center justify-between text-xs text-zinc-600 font-medium mt-0.5">
-                      <span>{getDayOfWeek(returnDate)}</span>
-                      <span className="text-[10px] text-zinc-400 font-semibold">Select ▾</span>
-                    </div>
-                  </>
-                ) : (
-                  <div className="text-xs text-zinc-600 font-medium leading-tight">
-                    <span className="block text-zinc-800 font-bold mb-0.5">+ Add Return</span>
-                    <span className="text-[11px] text-zinc-500">Save up to 15% on roundtrip!</span>
+              {activeCategory === "emptyLegs" || activeCategory === "joyrides" || activeCategory === "ambulance" ? (
+                <div className="md:col-span-2 p-4 bg-zinc-50/70 cursor-not-allowed select-none">
+                  <div className="text-[10px] uppercase font-bold tracking-wider text-zinc-500 mb-1">
+                    Return
                   </div>
-                )}
-              </div>
+                  <div className="text-base sm:text-lg font-bold text-zinc-800 tracking-tight">
+                    One-Way Only
+                  </div>
+                  <div className="text-[11px] text-zinc-500">
+                    {activeCategory === "emptyLegs" ? "Repositioning sector" : activeCategory === "joyrides" ? "Aerial loop flight" : "Emergency ICU transport"}
+                  </div>
+                </div>
+              ) : (
+                <div 
+                  className={`md:col-span-2 p-4 transition-colors cursor-pointer ${
+                    tripType === "oneway" ? "bg-zinc-50/50 hover:bg-zinc-100/70" : "hover:bg-zinc-50/80"
+                  }`}
+                  onClick={() => { 
+                    if (tripType === "oneway") setTripType("roundtrip")
+                    setDatePickerTarget("return")
+                    setIsDatePickerOpen(true)
+                  }}
+                >
+                  <div className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 mb-1 flex items-center justify-between">
+                    <span>Return</span>
+                    <CalendarCheck size={12} className="text-zinc-500" />
+                  </div>
+                  {tripType === "roundtrip" ? (
+                    <>
+                      <div className="text-xl sm:text-2xl font-black text-zinc-950 tracking-tight">
+                        {getFormattedDate(returnDate)}
+                      </div>
+                      <div className="flex items-center justify-between text-xs text-zinc-600 font-medium mt-0.5">
+                        <span>{getDayOfWeek(returnDate)}</span>
+                        <span className="text-[10px] text-zinc-400 font-semibold">Select ▾</span>
+                      </div>
+                    </>
+                  ) : (
+                    <div className="text-xs text-zinc-600 font-medium leading-tight">
+                      <span className="block text-zinc-800 font-bold mb-0.5">+ Add Return</span>
+                      <span className="text-[11px] text-zinc-500">Save up to 15% on roundtrip!</span>
+                    </div>
+                  )}
+                </div>
+              )}
 
               {/* TRAVELLERS + AIRCRAFT CLASS (Col span 2) */}
-              <div 
-                className="md:col-span-2 p-4 hover:bg-zinc-50/80 transition-colors cursor-pointer relative"
-                onClick={() => { setIsPaxModalOpen(!isPaxModalOpen); setIsSelectingFrom(false); setIsSelectingTo(false) }}
-              >
-                <div className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 mb-1 flex items-center justify-between">
-                  <span>Travellers &amp; Fleet</span>
-                  <ChevronDown size={12} className="text-zinc-600" />
+              {activeCategory === "emptyLegs" ? (
+                <div className="md:col-span-2 p-4 bg-zinc-50/70 cursor-not-allowed select-none">
+                  <div className="text-[10px] uppercase font-bold tracking-wider text-zinc-500 mb-1 flex items-center justify-between">
+                    <span>Travellers &amp; Fleet</span>
+                    <Zap size={12} className="text-amber-500" />
+                  </div>
+                  <div className="text-xl sm:text-2xl font-black text-zinc-950 tracking-tight">
+                    Whole Cabin
+                  </div>
+                  <p className="text-xs text-zinc-600 font-medium truncate mt-0.5">
+                    Up to 70% Off Fixed Flights
+                  </p>
                 </div>
-                <div className="text-xl sm:text-2xl font-black text-zinc-950 tracking-tight">
-                  {passengers} {passengers === 1 ? "Pax" : "Passengers"}
+              ) : activeCategory === "ambulance" ? (
+                <div className="md:col-span-2 p-4 bg-zinc-50/70 cursor-not-allowed select-none">
+                  <div className="text-[10px] uppercase font-bold tracking-wider text-zinc-500 mb-1 flex items-center justify-between">
+                    <span>Medical Crew &amp; Pax</span>
+                    <HeartPulse size={12} className="text-red-500" />
+                  </div>
+                  <div className="text-xl sm:text-2xl font-black text-zinc-950 tracking-tight">
+                    Patient + 2 Pax
+                  </div>
+                  <p className="text-xs text-zinc-600 font-medium truncate mt-0.5">
+                    Doctor + Paramedic + Attendant
+                  </p>
                 </div>
-                <p className="text-xs text-zinc-600 font-medium truncate mt-0.5">
-                  {aircraftPreference}
-                </p>
+              ) : (
+                <div 
+                  className="md:col-span-2 p-4 hover:bg-zinc-50/80 transition-colors cursor-pointer relative"
+                  onClick={() => { setIsPaxModalOpen(!isPaxModalOpen); setIsSelectingFrom(false); setIsSelectingTo(false) }}
+                >
+                  <div className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 mb-1 flex items-center justify-between">
+                    <span>Travellers &amp; Fleet</span>
+                    <ChevronDown size={12} className="text-zinc-600" />
+                  </div>
+                  <div className="text-xl sm:text-2xl font-black text-zinc-950 tracking-tight">
+                    {passengers} {passengers === 1 ? "Pax" : "Passengers"}
+                  </div>
+                  <p className="text-xs text-zinc-600 font-medium truncate mt-0.5">
+                    {aircraftPreference}
+                  </p>
 
-                {/* Travellers & Aircraft Popover */}
-                {isPaxModalOpen && (
-                  <>
-                    <div 
-                      className="fixed inset-0 z-40 bg-transparent" 
-                      onClick={(e) => { e.stopPropagation(); setIsPaxModalOpen(false) }} 
-                    />
-                    <div 
-                      data-lenis-prevent
-                      className="absolute right-0 top-full mt-2 w-72 bg-white rounded-2xl shadow-2xl border border-zinc-200 p-4 z-50 text-zinc-900 overscroll-contain"
-                      onClick={(e) => e.stopPropagation()}
-                      onWheel={(e) => e.stopPropagation()}
-                      onTouchMove={(e) => e.stopPropagation()}
-                    >
-                      <div className="space-y-4">
-                        <div>
-                          <label className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 block mb-1.5">
-                            Total Passengers
-                          </label>
-                          <div className="flex items-center justify-between bg-zinc-100 rounded-xl p-1.5">
-                            <button
-                              type="button"
-                              onClick={() => setPassengers(Math.max(1, passengers - 1))}
-                              className="w-8 h-8 rounded-lg bg-white font-bold text-sm shadow-sm flex items-center justify-center hover:bg-zinc-200 cursor-pointer"
-                            >
-                              -
-                            </button>
-                            <span className="font-bold text-sm text-zinc-900">{passengers} Passengers</span>
-                            <button
-                              type="button"
-                              onClick={() => setPassengers(Math.min(18, passengers + 1))}
-                              className="w-8 h-8 rounded-lg bg-white font-bold text-sm shadow-sm flex items-center justify-center hover:bg-zinc-200 cursor-pointer"
-                            >
-                              +
-                            </button>
+                  {/* Travellers & Aircraft Popover */}
+                  {isPaxModalOpen && (
+                    <>
+                      <div 
+                        className="fixed inset-0 z-40 bg-transparent" 
+                        onClick={(e) => { e.stopPropagation(); setIsPaxModalOpen(false) }} 
+                      />
+                      <div 
+                        data-lenis-prevent
+                        className="absolute right-0 top-full mt-2 w-72 bg-white rounded-2xl shadow-2xl border border-zinc-200 p-4 z-50 text-zinc-900 overscroll-contain"
+                        onClick={(e) => e.stopPropagation()}
+                        onWheel={(e) => e.stopPropagation()}
+                        onTouchMove={(e) => e.stopPropagation()}
+                      >
+                        <div className="space-y-4">
+                          <div>
+                            <label className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 block mb-1.5">
+                              Total Passengers
+                            </label>
+                            <div className="flex items-center justify-between bg-zinc-100 rounded-xl p-1.5">
+                              <button
+                                type="button"
+                                onClick={() => setPassengers(Math.max(1, passengers - 1))}
+                                className="w-8 h-8 rounded-lg bg-white font-bold text-sm shadow-sm flex items-center justify-center hover:bg-zinc-200 cursor-pointer"
+                              >
+                                -
+                              </button>
+                              <span className="font-bold text-sm text-zinc-900">{passengers} Passengers</span>
+                              <button
+                                type="button"
+                                onClick={() => setPassengers(Math.min(18, passengers + 1))}
+                                className="w-8 h-8 rounded-lg bg-white font-bold text-sm shadow-sm flex items-center justify-center hover:bg-zinc-200 cursor-pointer"
+                              >
+                                +
+                              </button>
+                            </div>
                           </div>
-                        </div>
 
-                        <div>
-                          <label className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 block mb-1.5">
-                            Preferred Aircraft Category
-                          </label>
-                          <select
-                            value={aircraftPreference}
-                            onChange={(e) => setAircraftPreference(e.target.value)}
-                            className="w-full text-xs font-semibold p-2.5 rounded-xl border border-zinc-200 bg-zinc-50 focus:outline-none cursor-pointer"
+                          <div>
+                            <label className="text-[10px] uppercase font-bold tracking-wider text-zinc-600 block mb-1.5">
+                              Preferred Aircraft Category
+                            </label>
+                            <select
+                              value={aircraftPreference}
+                              onChange={(e) => setAircraftPreference(e.target.value)}
+                              className="w-full text-xs font-semibold p-2.5 rounded-xl border border-zinc-200 bg-zinc-50 focus:outline-none cursor-pointer"
+                            >
+                              {activeCategory === "joyrides" ? (
+                                <>
+                                  <option>Scenic Tourer (Cirrus SR22)</option>
+                                  <option>Cessna 172 Skyhawk (3 Pax)</option>
+                                </>
+                              ) : activeCategory === "yatra" ? (
+                                <>
+                                  <option>VIP Helicopter (Airbus H130 / Bell 407)</option>
+                                  <option>Twin-Engine Chopper (Bell 429)</option>
+                                </>
+                              ) : (
+                                <>
+                                  <option>Light Jet (Up to 6 Pax)</option>
+                                  <option>Midsize Jet (Up to 8 Pax)</option>
+                                  <option>Super Midsize (Up to 10 Pax)</option>
+                                  <option>Heavy Jet (Up to 16 Pax)</option>
+                                  <option>VIP Turboprop (Up to 7 Pax)</option>
+                                </>
+                              )}
+                            </select>
+                          </div>
+
+                          <button
+                            type="button"
+                            onClick={() => setIsPaxModalOpen(false)}
+                            className="w-full py-2.5 bg-zinc-950 text-white rounded-xl text-[14px] font-medium tracking-tight antialiased hover:bg-zinc-800 transition-colors cursor-pointer border border-zinc-900/10"
                           >
-                            <option>Light Jet (Up to 6 Pax)</option>
-                            <option>Midsize Jet (Up to 8 Pax)</option>
-                            <option>Super Midsize (Up to 10 Pax)</option>
-                            <option>Heavy Jet (Up to 16 Pax)</option>
-                            <option>VIP Turboprop (Up to 7 Pax)</option>
-                            <option>Scenic Tourer (Cirrus SR22)</option>
-                            <option>VIP Helicopter (Bell 407)</option>
-                          </select>
+                            Apply Fleet Configuration
+                          </button>
                         </div>
-
-                        <button
-                          type="button"
-                          onClick={() => setIsPaxModalOpen(false)}
-                          className="w-full py-2.5 bg-zinc-950 text-white rounded-xl text-[14px] font-medium tracking-tight antialiased hover:bg-zinc-800 transition-colors cursor-pointer border border-zinc-900/10"
-                        >
-                          Apply Fleet Configuration
-                        </button>
                       </div>
-                    </div>
-                  </>
-                )}
-              </div>
+                    </>
+                  )}
+                </div>
+              )}
             </div>
 
             {/* ─── 4. Lower Control Strip (Payment mode, special offer badges, promocode, Search button) ─── */}
@@ -1049,10 +1339,84 @@ export function FlightSearchSection() {
         </div>
       </div>
 
-      {/* ─── 6. Real-Time Search Results (Revealed after searching) ─── */}
+      {/* ─── 6. Real-Time Search Results (Revealed after searching or for Empty Legs) ─── */}
       <div id="search-results-anchor" />
+
+      {/* Live Empty Leg Deals (Shown directly when Empty Leg category is active) */}
+      {activeCategory === "emptyLegs" && (
+        <div className="mt-8 space-y-6">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-6 rounded-3xl bg-zinc-950 text-white shadow-sm">
+            <div>
+              <div className="flex items-center gap-2 mb-1">
+                <span className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse" />
+                <span className="text-[10px] font-bold uppercase tracking-widest text-yellow-400 font-mono">
+                  Live Repositioning Radar • Up to 70% Off
+                </span>
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold tracking-tight">
+                Active Empty Leg Charters Ready For Takeoff
+              </h3>
+              <p className="text-xs text-zinc-400 mt-1">
+                Book whole-cabin private repositioning sectors at fractional rates. VIP FBO lounge clearance and 15-min airside tarmac boarding included.
+              </p>
+            </div>
+
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-yellow-400/20 border border-yellow-400/40 text-yellow-300 text-xs font-bold">
+              <Sparkles size={14} className="text-yellow-400" />
+              <span>Instant WhatsApp Dispatch</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-3">
+            {liveEmptyLegDeals.map((el) => (
+              <div
+                key={el.id}
+                className="relative rounded-3xl p-6 pt-8 bg-white border border-zinc-200 hover:border-black/30 transition-all flex flex-col justify-between space-y-6 shadow-sm hover:shadow-md overflow-visible"
+              >
+                {/* Yellow 70% discount badge in top right corner ON TOP of the card */}
+                <div className="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-yellow-400 text-zinc-950 font-black text-xs uppercase tracking-wider shadow-md border border-yellow-300 z-10">
+                  {el.discountPercent}
+                </div>
+
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-xs font-bold text-zinc-400">{el.id}</span>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100">
+                      {el.statusTag}
+                    </span>
+                  </div>
+
+                  <div className="space-y-1">
+                    <div className="text-xl font-bold text-zinc-900">{el.fromCity} ({el.fromCode}) ➔ {el.toCity} ({el.toCode})</div>
+                    <div className="text-xs text-zinc-500 font-medium">{el.aircraft} • {el.category}</div>
+                    <div className="text-xs font-mono text-amber-700 font-bold pt-1">{el.date} • {el.duration}</div>
+                  </div>
+
+                  <div className="pt-2 border-t border-zinc-100 flex items-baseline justify-between">
+                    <div>
+                      <span className="text-[10px] text-zinc-400 line-through">{el.regularPrice}</span>
+                      <div className="text-2xl font-black font-mono text-zinc-900">{el.dealPrice}</div>
+                    </div>
+                    <span className="text-xs text-zinc-500 font-medium">{el.seats} Seats Full Jet</span>
+                  </div>
+                </div>
+
+                <a
+                  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hello%20Flyyo%2C%20I%20want%20to%20instant%20book%20Empty%20Leg%20${el.id}%20from%20${el.fromCity}%20to%20${el.toCity}%20at%20${el.dealPrice}.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 rounded-xl bg-black hover:bg-zinc-800 text-white font-bold text-xs uppercase tracking-widest text-center transition-colors block cursor-pointer shadow-sm"
+                >
+                  Instant Book Empty Leg
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       <AnimatePresence>
-        {hasSearched && (
+        {hasSearched && activeCategory !== "emptyLegs" && (
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
