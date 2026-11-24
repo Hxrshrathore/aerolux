@@ -39,6 +39,8 @@ Watch the **AeroLux** luxury aviation prototype in motion — exploring the 3D f
   <video src="public/assets/videos/aerolux-walkthrough.mp4" width="100%" controls playsinline></video>
   <p><sub><em>▶️ Direct Asset Link: <a href="public/assets/videos/aerolux-walkthrough.mp4"><strong><code>public/assets/videos/aerolux-walkthrough.mp4</code></strong></a></em></sub></p>
 </div>
+https://github.com/user-attachments/assets/984f5648-9bab-4dbb-8c5d-dd6583643969
+
 
 ---
 
