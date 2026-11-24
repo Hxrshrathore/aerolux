@@ -35,12 +35,9 @@ Imagine you need to charter a private jet on short notice, experience a romantic
 
 Watch the **AeroLux** luxury aviation prototype in motion — exploring the 3D fluid glass navbar, cinematic video hero, interactive flight search engine, empty leg deals radar, and bespoke private aviation touchpoints:
 
-<div align="center">
-  <video src="public/assets/videos/aerolux-walkthrough.mp4" width="100%" controls playsinline></video>
-  <p><sub><em>▶️ Direct Asset Link: <a href="public/assets/videos/aerolux-walkthrough.mp4"><strong><code>public/assets/videos/aerolux-walkthrough.mp4</code></strong></a></em></sub></p>
-</div>
 https://github.com/user-attachments/assets/984f5648-9bab-4dbb-8c5d-dd6583643969
 
+> 📁 **Repository Asset (Optimized &lt; 10 MB):** [`public/assets/videos/aerolux-walkthrough.mp4`](public/assets/videos/aerolux-walkthrough.mp4)
 
 ---
 
