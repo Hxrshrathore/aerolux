@@ -30,14 +30,6 @@ function FleetContent() {
       <section className="px-6 max-w-7xl mx-auto mb-16">
         <div className="flex flex-col md:flex-row justify-between items-end gap-8">
           <div className="space-y-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-600 flex items-center gap-2"
-            >
-              <Sparkles size={13} className="text-amber-500" />
-              Flyyo Fleet & Offerings
-            </motion.div>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

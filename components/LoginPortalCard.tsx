@@ -25,7 +25,7 @@ import {
 // Dynamically import FluidGlass with SSR disabled for optimal client-side 3D performance
 const FluidGlass = dynamic(() => import("./FluidGlass"), { ssr: false })
 
-// Helper to mask email or phone number with asterisks (e.g. vi***er@flyyo.in or +91 98*** **345)
+// Helper to mask email or phone number with asterisks (e.g. vi***er@aerolux.design or +91 98*** **345)
 function maskIdentifier(val: string): string {
   if (!val) return ''
   const trimmed = val.trim()
@@ -179,7 +179,7 @@ export function LoginPortalCard({
 
   // Demo 1-click credentials filler
   const handleDemoFill = () => {
-    setIdentifier("vip.member@flyyo.in")
+    setIdentifier("vip.member@aerolux.design")
     setPassword("PrivateCharter#2026")
   }
 
@@ -239,7 +239,7 @@ export function LoginPortalCard({
     // Success Authentication
     setIsSuccess(true)
     const userData = {
-      email: identifier.includes('@') ? identifier : `${identifier}@flyyo.in`,
+      email: identifier.includes('@') ? identifier : `${identifier}@aerolux.design`,
       name: fullName || 'VIP Member',
       role: 'SkyClub Member'
     }
@@ -405,7 +405,7 @@ export function LoginPortalCard({
                       await new Promise(r => setTimeout(r, 800))
                       setIsLoading(false)
                       setIsSuccess(true)
-                      if (onSuccess) onSuccess({ email: 'google.member@flyyo.in', name: 'Google Member' })
+                      if (onSuccess) onSuccess({ email: 'google.member@aerolux.design', name: 'Google Member' })
                       setTimeout(() => {
                         if (isModal && onCloseModal) onCloseModal()
                         else if (!isModal) router.push('/dashboard')
@@ -488,7 +488,7 @@ export function LoginPortalCard({
                             type={isPhoneNumber ? "tel" : "text"}
                             value={identifier}
                             onChange={e => setIdentifier(e.target.value)}
-                            placeholder={isPhoneNumber ? "98200 12345" : "vip.client@flyyo.in or phone number"}
+                            placeholder={isPhoneNumber ? "98200 12345" : "vip.client@aerolux.design or phone number"}
                             className="w-full bg-white/[0.07] hover:bg-white/[0.10] border border-white/15 focus:border-amber-400 rounded-xl py-3 px-3.5 outline-none transition-all text-xs sm:text-sm text-white placeholder-zinc-400 font-medium"
                           />
                         </div>

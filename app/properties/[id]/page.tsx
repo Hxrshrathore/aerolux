@@ -15,13 +15,13 @@ import {
   Share2, 
   Phone, 
   Mail, 
-  MessageCircle,
   ShieldCheck,
   Sparkles,
   Calculator
 } from "lucide-react"
 import { properties } from "@/lib/properties"
 import { GlobalConversionModal } from "@/components/GlobalConversionModal"
+import { WhatsAppIcon } from "@/components/WhatsAppIcon"
 
 export default function PropertyDetailsPage() {
   const params = useParams()
@@ -36,8 +36,8 @@ export default function PropertyDetailsPage() {
     if (typeof navigator !== 'undefined' && navigator.share) {
       try {
         await navigator.share({
-          title: `Flyyo — ${charter.title}`,
-          text: `Check out ${charter.title} by Flyyo Private Aviation: ${charter.description}`,
+          title: `AeroLux — ${charter.title}`,
+          text: `Check out ${charter.title} by AeroLux Private Aviation: ${charter.description}`,
           url: window.location.href,
         })
       } catch (err) {
@@ -232,7 +232,7 @@ export default function PropertyDetailsPage() {
             <div className="sticky top-28 bg-white border border-zinc-200 rounded-[32px] p-8 shadow-xl space-y-6">
               <div>
                 <span className="text-[10px] uppercase font-bold tracking-widest text-emerald-600">
-                  Flyyo Private Charter Desk
+                  AeroLux Private Charter Desk
                 </span>
                 <h3 className="text-2xl font-bold text-zinc-900 mt-1">{charter.title}</h3>
                 <div className="text-xl font-black text-black mt-2">{charter.price}</div>
@@ -247,12 +247,12 @@ export default function PropertyDetailsPage() {
                 </button>
 
                 <a
-                  href={`https://wa.me/919511826428?text=Hi%20Flyyo%2C%20I%20am%20interested%20in%20booking%20${encodeURIComponent(charter.title)}.`}
+                  href={`https://wa.me/919876543210?text=Hi%20AeroLux%2C%20I%20am%20interested%20in%20booking%20${encodeURIComponent(charter.title)}.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebd5a] text-black font-bold py-4 rounded-2xl text-xs uppercase tracking-widest transition-all"
                 >
-                  <MessageCircle size={16} className="fill-black" /> Chat with Coordinator
+                  <WhatsAppIcon size={16} className="shrink-0" /> Chat with Coordinator
                 </a>
               </div>
 
@@ -263,7 +263,7 @@ export default function PropertyDetailsPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone size={15} className="text-zinc-400" />
-                  <span>+91 95118 26428 (24/7 Operations)</span>
+                  <span>+91 98765 43210 (24/7 Operations)</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin size={15} className="text-zinc-400" />

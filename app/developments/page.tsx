@@ -34,13 +34,6 @@ export default function DevelopmentsPage() {
       {/* Hero */}
       <section className="px-6 max-w-7xl mx-auto mb-24">
         <div className="max-w-3xl space-y-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-600"
-          >
-            Future Developments
-          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -113,7 +106,6 @@ export default function DevelopmentsPage() {
         <div className="bg-zinc-50 rounded-[60px] p-12 md:p-24 border border-zinc-100">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <div className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-600">Global Presence</div>
               <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-zinc-900">Expanding Horizons.</h2>
               <p className="text-zinc-700 text-lg leading-relaxed font-medium">
                 With active projects in 12 major cities across 4 continents, Rathore Developers is a truly global firm. We adapt our luxury standards to local cultures and environments.

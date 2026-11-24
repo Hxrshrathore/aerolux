@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next'
+import { siteConfig } from '@/lib/config'
 
-const BASE_URL = 'https://flyyo.co.in'
+const BASE_URL = siteConfig.url
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
@@ -8,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/book-flight`, priority: 0.9, changeFrequency: 'daily' as const },
     { url: `${BASE_URL}/airplane-joyride`, priority: 0.9, changeFrequency: 'daily' as const },
     { url: `${BASE_URL}/ek-dham-yatra`, priority: 0.8, changeFrequency: 'weekly' as const },
-    { url: `${BASE_URL}/about-flyyo`, priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: `${BASE_URL}/about-aerolux`, priority: 0.8, changeFrequency: 'monthly' as const },
     { url: `${BASE_URL}/contact-us`, priority: 0.8, changeFrequency: 'monthly' as const },
     { url: `${BASE_URL}/terms-and-conditon`, priority: 0.5, changeFrequency: 'monthly' as const },
     { url: `${BASE_URL}/blog`, priority: 0.7, changeFrequency: 'weekly' as const },

@@ -10,7 +10,6 @@ import {
   Heart, 
   ShieldCheck, 
   CheckCircle2, 
-  MessageCircle, 
   ArrowRight, 
   Clock, 
   Users, 
@@ -24,6 +23,7 @@ import {
   Send
 } from "lucide-react"
 import { siteConfig } from "@/lib/config"
+import { WhatsAppIcon } from "@/components/WhatsAppIcon"
 import { EkDhamHero } from "@/components/EkDhamHero"
 
 // ─── Data: 3-Day Itinerary ───
@@ -37,7 +37,7 @@ const itineraryDays = [
     meal: "Dinner Included",
     highlights: [
       "Smooth hotel check-in and luggage assistance",
-      "Briefing by dedicated Flyyo Yatra ground coordinator",
+      "Briefing by dedicated AeroLux Yatra ground coordinator",
       "High altitude mountain acclimatization & rest",
       "Serene evening temple atmosphere and mountain views"
     ],
@@ -146,7 +146,7 @@ export default function EkDhamYatraPage() {
     
     // Create WhatsApp link with prefilled message
     const msg = encodeURIComponent(
-      `🙏 Namaste Flyyo! I want to book Kedarnath Yatra by Helicopter.\n\n` +
+      `🙏 Namaste AeroLux! I want to book Kedarnath Yatra by Helicopter.\n\n` +
       `📦 Package: ${packageType}\n` +
       `📅 Preferred Date: ${travelDate || "Upcoming available slot"}\n` +
       `👥 Number of Yatris: ${yatrisCount} Persons\n` +
@@ -288,11 +288,6 @@ export default function EkDhamYatraPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Storytelling & Values */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 text-zinc-700 text-[10px] font-bold uppercase tracking-[0.25em]">
-              <Sparkles size={12} className="text-amber-500" />
-              Redefining Sacred Pilgrimage
-            </div>
-
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-950 leading-[1.05]">
               Holy Journey to Kedarnath. <br />
               <span className="font-serif italic font-normal text-zinc-500">Divine Comfort Guaranteed.</span>
@@ -303,7 +298,7 @@ export default function EkDhamYatraPage() {
             </p>
 
             <p className="text-zinc-700 text-sm sm:text-base leading-relaxed">
-              With Flyyo’s <strong>Kedarnath Yatra By Helicopter Package (2 Nights & 3 Days Ex-PHATA)</strong>, elders, families, and busy devotees fly directly across the breathtaking Mandakini valley in just 9 minutes, landing right at the doorstep of Lord Shiva with VIP priority darshan assistance.
+              With AeroLux’s <strong>Kedarnath Yatra By Helicopter Package (2 Nights & 3 Days Ex-PHATA)</strong>, elders, families, and busy devotees fly directly across the breathtaking Mandakini valley in just 9 minutes, landing right at the doorstep of Lord Shiva with VIP priority darshan assistance.
             </p>
 
             {/* Feature Badges Grid */}
@@ -362,11 +357,6 @@ export default function EkDhamYatraPage() {
           ───────────────────────────────────────────────────────────── */}
       <section className="py-24 px-6 max-w-7xl mx-auto bg-zinc-50 rounded-[40px] border border-zinc-200 my-8">
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-[10px] font-bold uppercase tracking-widest">
-            <Clock size={12} />
-            Day-by-Day Journey
-          </div>
-
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-950">
             Detailed Tour Itinerary : <br />
             <span className="font-serif italic font-normal text-zinc-500">2 Night & 3 Days Ex-PHATA.</span>
@@ -473,14 +463,11 @@ export default function EkDhamYatraPage() {
           ───────────────────────────────────────────────────────────── */}
       <section className="py-20 px-6 max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-14">
-          <div className="text-[10px] uppercase font-bold tracking-[0.3em] text-zinc-500">
-            Sacred Offerings
-          </div>
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-950">
             Choose Your Yatra Package.
           </h2>
           <p className="text-zinc-600 text-sm">
-            Whether embarking on the flagship Ex-Phata 2N/3D journey or a direct same-day charter from Dehradun, Flyyo provides unmatched devotion and care.
+            Whether embarking on the flagship Ex-Phata 2N/3D journey or a direct same-day charter from Dehradun, AeroLux provides unmatched devotion and care.
           </p>
         </div>
 
@@ -531,7 +518,7 @@ export default function EkDhamYatraPage() {
 
               <div className="pt-8">
                 <a
-                  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hi%20Flyyo%2C%20I%20am%20interested%20in%20booking%20the%20${encodeURIComponent(pkg.name)}.`}
+                  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hi%20AeroLux%2C%20I%20am%20interested%20in%20booking%20the%20${encodeURIComponent(pkg.name)}.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`w-full py-4 rounded-xl text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2 transition-all cursor-pointer ${
@@ -559,10 +546,6 @@ export default function EkDhamYatraPage() {
 
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-[10px] font-bold uppercase tracking-widest">
-                <Sparkles size={12} /> Operations Now Commencing
-              </div>
-
               <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.05]">
                 Ready to take off? <br />
                 <span className="font-serif italic font-normal text-amber-300">
@@ -576,7 +559,7 @@ export default function EkDhamYatraPage() {
 
               <div className="flex flex-wrap items-center gap-6 pt-2 text-xs text-zinc-400 font-semibold uppercase tracking-wider">
                 <span className="flex items-center gap-1.5 text-zinc-300">
-                  <Phone size={14} className="text-emerald-400" /> +91 95118 26428
+                  <Phone size={14} className="text-emerald-400" /> +91 98765 43210
                 </span>
                 <span className="flex items-center gap-1.5 text-zinc-300">
                   <CheckCircle2 size={14} className="text-amber-400" /> Instant WhatsApp Confirmation
@@ -586,18 +569,18 @@ export default function EkDhamYatraPage() {
 
             <div className="lg:col-span-4 flex flex-col items-start lg:items-end justify-center space-y-4">
               <a
-                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hi%20Flyyo%2C%20I%20want%20to%20BOOK%20NOW%20for%20the%20Kedarnath%20Yatra%20by%20Helicopter%20Package.`}
+                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hi%20AeroLux%2C%20I%20want%20to%20BOOK%20NOW%20for%20the%20Kedarnath%20Yatra%20by%20Helicopter%20Package.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#1ebd5a] text-black font-black text-sm uppercase tracking-widest px-9 py-5 rounded-full shadow-[0_0_30px_rgba(37,211,102,0.4)] hover:shadow-[0_0_40px_rgba(37,211,102,0.6)] transition-all duration-300 hover:scale-105 cursor-pointer"
               >
-                <MessageCircle size={20} className="fill-black" />
+                <WhatsAppIcon size={20} className="shrink-0" />
                 BOOK NOW
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
 
               <p className="text-[10px] uppercase tracking-widest text-zinc-500 font-bold">
-                Direct Hotline: +91 95118 26428
+                Direct Hotline: +91 98765 43210
               </p>
             </div>
           </div>

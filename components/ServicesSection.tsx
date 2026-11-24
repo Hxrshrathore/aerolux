@@ -42,15 +42,11 @@ export function ServicesSection() {
   return (
     <section id="solutions" className="py-16 md:py-24 px-6 max-w-7xl mx-auto">
       <div className="space-y-4 mb-12 md:mb-16">
-        <div className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-600 flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-black" />
-          Turnkey Aviation Ecosystem
-        </div>
         <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-zinc-900">
-          Airborne Solutions, <span className="font-serif italic font-normal text-zinc-500">by Flyyo.</span>
+          Airborne Solutions, <span className="font-serif italic font-normal text-zinc-500">by AeroLux.</span>
         </h2>
         <p className="text-zinc-600 max-w-2xl text-base font-medium">
-          Beyond passenger charters, Flyyo delivers end-to-end management, engineering compliance, and financial structuring for aircraft owners, corporations, and aviation investors.
+          Beyond passenger charters, AeroLux delivers end-to-end management, engineering compliance, and financial structuring for aircraft owners, corporations, and aviation investors.
         </p>
       </div>
 
@@ -58,7 +54,7 @@ export function ServicesSection() {
         <div className="lg:col-span-5 relative aspect-video lg:aspect-[4/5] rounded-[32px] md:rounded-[40px] overflow-hidden shadow-2xl border border-zinc-200 sticky top-28">
           <Image
             src="/assets/images/fleet-hangar.jpg"
-            alt="Flyyo Airborne Solutions Aircraft Hangar"
+            alt="AeroLux Airborne Solutions Aircraft Hangar"
             fill
             className="object-cover"
             referrerPolicy="no-referrer"
@@ -115,7 +111,7 @@ export function ServicesSection() {
             </Link>
 
             <a
-              href="https://wa.me/919511826428?text=Hi%20Flyyo%2C%20I%20am%20interested%20in%20Airborne%20Solutions%20(Aircraft%20Sales%20%2F%20Maintenance%20%2F%20Operations)."
+              href="https://wa.me/919876543210?text=Hi%20AeroLux%2C%20I%20am%20interested%20in%20Airborne%20Solutions%20(Aircraft%20Sales%20%2F%20Maintenance%20%2F%20Operations)."
               target="_blank"
               rel="noopener noreferrer"
               className="text-center text-xs font-bold uppercase tracking-widest text-zinc-800 hover:text-black py-4 px-6 rounded-full border border-zinc-300 hover:border-black transition-all"

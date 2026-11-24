@@ -94,7 +94,7 @@ export function Navbar() {
   return (
     <>
       <CardNav
-        logoText="FLYYO"
+        logoText="AEROLUX"
         logoHref="/"
         items={cardItems}
         baseColor={baseColor}

@@ -2,8 +2,9 @@
 
 import * as React from "react"
 import { motion, AnimatePresence } from "motion/react"
-import { MessageCircle, Phone, Mail, X, Users, Plane } from "lucide-react"
+import { Phone, Mail, X, Users, Plane } from "lucide-react"
 import { siteConfig } from "@/lib/config"
+import { WhatsAppIcon } from "./WhatsAppIcon"
 
 export function FloatingCTA() {
   const [isExpanded, setIsExpanded] = React.useState(false)
@@ -40,7 +41,7 @@ export function FloatingCTA() {
       color: "bg-amber-600 text-white hover:bg-amber-500",
     },
     {
-      icon: <MessageCircle size={18} />,
+      icon: <WhatsAppIcon size={18} />,
       label: "WhatsApp",
       href: siteConfig.contact.whatsappLink,
       color: "bg-[#25D366] text-black font-bold hover:bg-[#1ebd5a]",
@@ -87,7 +88,7 @@ export function FloatingCTA() {
           animate={{ rotate: isExpanded ? 90 : 0 }}
           transition={{ duration: 0.2 }}
         >
-          {isExpanded ? <X size={22} /> : <MessageCircle size={24} className="text-[#25D366]" />}
+          {isExpanded ? <X size={22} /> : <WhatsAppIcon size={24} />}
         </motion.div>
       </motion.button>
     </div>

@@ -23,7 +23,6 @@ import {
   CreditCard, 
   ChevronRight, 
   Search, 
-  MessageCircle, 
   Check, 
   Lock, 
   X,
@@ -43,9 +42,10 @@ import {
   Shield
 } from "lucide-react"
 import { siteConfig } from "@/lib/config"
+import { WhatsAppIcon } from "@/components/WhatsAppIcon"
 import { FlightSearchSection } from "@/components/FlightSearchSection"
 
-function FlyyoLogo({ className = "h-8 w-8", color = "currentColor" }: { className?: string, color?: string }) {
+function AeroLuxLogo({ className = "h-8 w-8", color = "currentColor" }: { className?: string, color?: string }) {
   return (
     <svg
       width="1016"
@@ -138,7 +138,7 @@ const activeFlightData = {
   aogProtection: {
     guarantee: "100% Guaranteed Dispatch SLA",
     backupTailNumber: "VT-FLY (Citation Sovereign+)",
-    backupLocation: "BOM Hangar 4 (Flyyo Fleet Reserve)",
+    backupLocation: "BOM Hangar 4 (AeroLux Fleet Reserve)",
     recoveryTime: "Under 60 Minutes Guaranteed"
   },
   crew: [
@@ -147,7 +147,7 @@ const activeFlightData = {
   ],
   groundOps: {
     marshal: "Vikram Sen",
-    hotline: "+91 95118 26428",
+    hotline: "+91 98765 43210",
     tarmacCar: "Mercedes-Maybach S-Class (Direct Airside Transfer)",
     boardingTime: "15 Minutes Before Wheels-Up (No Commercial Queues)"
   },
@@ -334,9 +334,9 @@ export default function DashboardPage() {
           {/* Brand Header */}
           <div className="p-6 pb-4 flex items-center justify-between border-b border-zinc-100 shrink-0">
             <Link href="/" className="flex items-center gap-3 no-underline group">
-              <FlyyoLogo className="h-8 w-8 text-black transition-transform group-hover:scale-105" color="#000000" />
+              <AeroLuxLogo className="h-8 w-8 text-black transition-transform group-hover:scale-105" color="#000000" />
               <div className="flex flex-col">
-                <span className="text-xl font-black tracking-tight text-black leading-none">Flyyo</span>
+                <span className="text-xl font-black tracking-tight text-black leading-none">AeroLux</span>
                 <span className="text-[10px] tracking-widest text-amber-600 font-bold uppercase mt-1">SkyClub VIP</span>
               </div>
             </Link>
@@ -452,12 +452,12 @@ export default function DashboardPage() {
           <div className="flex items-center gap-4 sm:gap-6">
             {/* 24/7 Operations Desk WhatsApp CTA */}
             <a
-              href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hello%20Flyyo%20Flight%20Desk%2C%20I%20am%20messaging%20from%20my%20SkyClub%20Dashboard.`}
+              href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hello%20AeroLux%20Flight%20Desk%2C%20I%20am%20messaging%20from%20my%20SkyClub%20Dashboard.`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-100 hover:bg-zinc-200 border border-zinc-200 text-zinc-900 text-xs font-bold transition-all cursor-pointer shadow-xs"
             >
-              <MessageCircle size={15} className="text-emerald-600" />
+              <WhatsAppIcon size={16} className="shrink-0" />
               <span className="hidden sm:inline">24/7 Ops Desk</span>
             </a>
 
@@ -520,10 +520,6 @@ export default function DashboardPage() {
               {/* Quick Book Charter Banner (Linking to the Same Flight Search Component) */}
               <div className="bg-white rounded-3xl border border-zinc-200 p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6 hover:border-black/20 transition-all">
                 <div className="space-y-2">
-                  <div className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-600 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-black" />
-                    SkyClub Immediate Flight Dispatch
-                  </div>
                   <h3 className="text-2xl font-bold tracking-tight text-zinc-900">
                     Need Another Flight or Helicopter?
                   </h3>
@@ -545,10 +541,6 @@ export default function DashboardPage() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <div className="space-y-0.5">
-                    <div className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-600 flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                      Live Confirmed Itinerary
-                    </div>
                     <h2 className="text-xl font-bold tracking-tight text-zinc-900">Assigned Flight &amp; Radar Clearance</h2>
                   </div>
                   <button 
@@ -777,10 +769,6 @@ export default function DashboardPage() {
             <div className="space-y-6">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-zinc-200">
                 <div>
-                  <div className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-600 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-black" />
-                    Flyyo SkyClub Fleet Dispatch
-                  </div>
                   <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900 mt-1">
                     Book a <span className="font-serif italic font-normal text-zinc-500">Private Charter</span>
                   </h2>
@@ -809,10 +797,6 @@ export default function DashboardPage() {
             <div className="space-y-8">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
-                  <div className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-600 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-amber-500" />
-                    Real-Time Repositioning Charters
-                  </div>
                   <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900 mt-1">
                     Active Empty Leg Radar
                   </h2>
@@ -862,7 +846,7 @@ export default function DashboardPage() {
                     </div>
 
                     <a
-                      href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hello%20Flyyo%2C%20I%20want%20to%20instant%20book%20Empty%20Leg%20${el.id}%20from%20${el.from}%20to%20${el.to}%20at%20${el.discountPrice}.`}
+                      href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hello%20AeroLux%2C%20I%20want%20to%20instant%20book%20Empty%20Leg%20${el.id}%20from%20${el.from}%20to%20${el.to}%20at%20${el.discountPrice}.`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full py-3 rounded-xl bg-black hover:bg-zinc-800 text-white font-bold text-xs uppercase tracking-widest text-center transition-colors block cursor-pointer shadow-sm"
@@ -882,10 +866,6 @@ export default function DashboardPage() {
             <div className="space-y-8">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
-                  <div className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-600 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-black" />
-                    Airport VIP Airside Clearance
-                  </div>
                   <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900 mt-1">
                     DGCA Passenger Manifest
                   </h2>
@@ -1057,10 +1037,6 @@ export default function DashboardPage() {
             <div className="space-y-8">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
-                  <div className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-600 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                    Strict Dietary Integrity
-                  </div>
                   <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900 mt-1">
                     Gourmet &amp; Pure Satvik Dining
                   </h2>
@@ -1152,19 +1128,15 @@ export default function DashboardPage() {
               {/* Airside Extras: Senior & Medical Support */}
               <div className="p-6 sm:p-8 rounded-3xl bg-white border border-zinc-200 grid grid-cols-1 sm:grid-cols-2 gap-6 items-center shadow-sm">
                 <div className="space-y-1.5">
-                  <div className="text-[10px] uppercase tracking-[0.3em] font-bold text-amber-700 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-amber-500" />
-                    Airside Care
-                  </div>
                   <h4 className="text-lg font-bold text-zinc-900">Senior Citizen &amp; Medical Concierge</h4>
                   <p className="text-xs text-zinc-600 leading-relaxed">
-                    Flyyo charters can be equipped with certified high-altitude oxygen concentrators, wheelchairs for tarmac boarding, and trained medical attendants upon request.
+                    AeroLux charters can be equipped with certified high-altitude oxygen concentrators, wheelchairs for tarmac boarding, and trained medical attendants upon request.
                   </p>
                 </div>
 
                 <div className="flex sm:justify-end">
                   <a
-                    href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hello%20Flyyo%2C%20I%20want%20to%20request%20medical%20oxygen%20and%20wheelchair%20assistance%20for%20my%20flight.`}
+                    href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hello%20AeroLux%2C%20I%20want%20to%20request%20medical%20oxygen%20and%20wheelchair%20assistance%20for%20my%20flight.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-5 py-3 rounded-xl bg-black hover:bg-zinc-800 text-white font-bold text-xs uppercase tracking-wider flex items-center gap-2 transition-colors cursor-pointer shadow-sm"
@@ -1184,15 +1156,11 @@ export default function DashboardPage() {
             <div className="space-y-8">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
-                  <div className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-600 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-black" />
-                    Audit-Ready Tax Documentation
-                  </div>
                   <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900 mt-1">
                     All-Inclusive Tax Invoices (GST 18%)
                   </h2>
                   <p className="text-xs sm:text-sm text-zinc-500">
-                    Every Flyyo invoice clearly distinguishes flight hours, airport fees, handling charges, and GST. Zero hidden post-flight bills guaranteed.
+                    Every AeroLux invoice clearly distinguishes flight hours, airport fees, handling charges, and GST. Zero hidden post-flight bills guaranteed.
                   </p>
                 </div>
 
@@ -1268,10 +1236,6 @@ export default function DashboardPage() {
               {/* Header */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
-                  <div className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-600 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-black" />
-                    SkyClub Access &amp; Credentials
-                  </div>
                   <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900 mt-1">
                     Account &amp; Security Settings
                   </h2>
@@ -1502,7 +1466,7 @@ export default function DashboardPage() {
                         <p className="text-xs text-zinc-500">DGCA &amp; FBO terminal passenger details.</p>
                       </div>
                       <span className="px-3 py-1 rounded-full bg-zinc-100 text-zinc-800 text-[10px] font-black uppercase tracking-wider border border-zinc-200">
-                        FLYYO-VIP-9942
+                        AEROLUX-VIP-9942
                       </span>
                     </div>
 

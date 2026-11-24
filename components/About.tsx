@@ -6,7 +6,7 @@ import { motion } from "motion/react"
 import Link from "next/link"
 import { Sparkles } from "lucide-react"
 
-function FlyyoLogo({ className = "w-5 h-5" }: { className?: string }) {
+function AeroLuxLogo({ className = "w-5 h-5" }: { className?: string }) {
   return (
     <svg
       width="1016"
@@ -68,7 +68,7 @@ function LearnMoreButton() {
 
   return (
     <Link
-      href="/about-flyyo"
+      href="/about-aerolux"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className="group relative overflow-hidden inline-flex items-center justify-center px-7 sm:px-8 py-3.5 sm:py-4 rounded-full bg-zinc-950 shadow-xl shadow-zinc-950/20 hover:scale-[1.03] transition-all duration-300 border border-zinc-800 cursor-pointer"
@@ -84,13 +84,13 @@ function LearnMoreButton() {
         }}
       />
 
-      {/* Button content — matching Navbar CTA button typography and Flyyo logo SVG */}
+      {/* Button content — matching Navbar CTA button typography and AeroLux logo SVG */}
       <span
         className="relative z-10 flex items-center gap-2.5 text-[14px] sm:text-[15px] font-medium tracking-tight antialiased transition-colors duration-300"
         style={{ color: isHovered ? '#09090b' : '#ffffff' }}
       >
         <span>Learn More About</span>
-        <FlyyoLogo
+        <AeroLuxLogo
           className="w-5 h-5 transition-transform duration-300 group-hover:scale-110"
         />
       </span>
@@ -107,15 +107,6 @@ export function About() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
         {/* LEFT: Title & Hero-style CTA button - Scroll locked while right side scrolls */}
         <div className="space-y-6 md:space-y-8 lg:sticky lg:top-28 xl:top-32 self-start">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-600 flex items-center gap-2"
-          >
-            <Sparkles size={14} className="text-amber-500" />
-            The Flyyo Philosophy
-          </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -141,7 +132,7 @@ export function About() {
           >
             <Image
               src="/assets/images/cabin-interior.jpg"
-              alt="Flyyo Luxury Private Jet Interior"
+              alt="AeroLux Luxury Private Jet Interior"
               fill
               className="object-cover hover:scale-105 transition-transform duration-700"
               referrerPolicy="no-referrer"
@@ -163,7 +154,7 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              Flyyo was founded on a singular conviction: private flight should not merely be a mode of transport, but a transformative luxury experience. Headquartered at Juhu Airport, Mumbai, our mission is to deliver seamless air mobility, scenic airplane joyrides, and urgent air ambulance operations across India and internationally.
+              AeroLux was created as an ambitious design project on a singular conviction: private flight should not merely be a mode of transport, but a transformative luxury experience. Headquartered at Juhu Airport, Mumbai, our mission is to deliver seamless air mobility, scenic airplane joyrides, and urgent air ambulance operations across India and internationally.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}

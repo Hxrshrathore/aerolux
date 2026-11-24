@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { motion, AnimatePresence } from "motion/react"
-import { Plus, Minus, Search, MessageSquare, MessageCircle, Phone, Mail, FileText } from "lucide-react"
+import { Plus, Minus, Search, MessageSquare, Phone, Mail, FileText } from "lucide-react"
 
 const INJECTED_METADATA_IGNORE = 1; // Since it's a 'use client' file we can't export metadata directly here, so we'll just leave it.
 
@@ -73,13 +73,6 @@ export default function FAQPage() {
       {/* Hero */}
       <section className="px-6 max-w-7xl mx-auto mb-16">
         <div className="max-w-3xl space-y-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-600"
-          >
-            Support Center
-          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

@@ -2,63 +2,44 @@
 
 import * as React from "react"
 import { motion } from "motion/react"
-import { MessageCircle, Sparkles, ArrowRight, Zap, Bell, ShieldCheck } from "lucide-react"
+import { ArrowRight } from "lucide-react"
+import { WhatsAppIcon } from "./WhatsAppIcon"
 
 export function CommunityBanner() {
   return (
-    <section className="py-12 px-6 max-w-7xl mx-auto">
+    <section className="py-8 sm:py-10 px-6 max-w-7xl mx-auto">
       <motion.div
         initial={{ opacity: 0, scale: 0.98 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className="relative overflow-hidden rounded-[36px] bg-gradient-to-br from-zinc-950 via-zinc-900 to-black p-8 sm:p-12 md:p-16 border border-zinc-800 shadow-2xl text-white"
+        className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-zinc-950 via-zinc-900 to-black p-6 sm:p-8 md:p-10 border border-zinc-800 shadow-xl text-white"
       >
         {/* Ambient Glows */}
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-24 -right-24 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-8 space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-[10px] md:text-xs font-bold uppercase tracking-[0.25em]">
-              <Zap size={14} className="fill-emerald-400" />
-              Charter Deals are ON!!!
-            </div>
-
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.05]">
-              The Flyyo <span className="font-serif italic font-normal text-emerald-300">Community.</span>
+        <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-8">
+          <div className="space-y-2.5 max-w-2xl">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
+              The AeroLux <span className="font-serif italic font-normal text-emerald-300">Community.</span>
             </h2>
 
-            <p className="text-zinc-300 text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-2xl">
-              Join our Flyyo community to get the best Flight and Airplane Joyride deals and be the first one to grab them. Our community offers exclusive access to Limited offers and discounts you won&apos;t find anywhere else. Don&apos;t miss out — Join the Flyyo Community Now!
+            <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed max-w-xl">
+              Join our exclusive WhatsApp community to get real-time flight deals, empty leg alerts, and priority joyride booking slots.
             </p>
-
-            <div className="flex flex-wrap items-center gap-6 pt-2 text-xs text-zinc-400 font-bold uppercase tracking-wider">
-              <span className="flex items-center gap-2">
-                <Sparkles size={14} className="text-amber-400" /> Empty Leg Alerts
-              </span>
-              <span className="flex items-center gap-2">
-                <Bell size={14} className="text-emerald-400" /> Joyride Flash Discounts
-              </span>
-              <span className="flex items-center gap-2">
-                <ShieldCheck size={14} className="text-blue-400" /> Verified Member Perks
-              </span>
-            </div>
           </div>
 
-          <div className="lg:col-span-4 flex flex-col items-start lg:items-end justify-center">
+          <div className="shrink-0 w-full sm:w-auto">
             <a
-              href="https://chat.whatsapp.com/IVHW93LqNxqLW3ZlbVOWdz"
+              href="https://wa.me/919876543210?text=Hi%20AeroLux%2C%20I%20want%20to%20join%20the%20VIP%20AeroLux%20Community."
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#1ebd5a] text-black font-black text-xs md:text-sm uppercase tracking-widest px-8 py-5 rounded-full shadow-[0_0_30px_rgba(37,211,102,0.4)] hover:shadow-[0_0_40px_rgba(37,211,102,0.6)] transition-all duration-300 hover:scale-105"
+              className="group relative inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#1ebd5a] text-black font-extrabold text-xs sm:text-sm uppercase tracking-wider px-6 py-3.5 sm:px-7 sm:py-4 rounded-full shadow-[0_0_25px_rgba(37,211,102,0.35)] hover:shadow-[0_0_35px_rgba(37,211,102,0.5)] transition-all duration-300 hover:scale-105 whitespace-nowrap w-full sm:w-auto cursor-pointer"
             >
-              <MessageCircle size={20} className="fill-black" />
-              Join Flyyo Community Now
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              <WhatsAppIcon size={19} className="shrink-0" />
+              <span className="whitespace-nowrap">Join AeroLux Community</span>
+              <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform shrink-0" />
             </a>
-            <p className="text-[10px] uppercase tracking-widest text-zinc-500 mt-3 font-semibold">
-              Instant Access via Official WhatsApp
-            </p>
           </div>
         </div>
       </motion.div>

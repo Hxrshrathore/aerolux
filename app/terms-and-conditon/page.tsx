@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ShieldCheck, FileText, Plane, Phone, Mail, ArrowLeft } from "lucide-react";
+import { ShieldCheck, FileText, Plane, Phone, Mail, ArrowLeft, AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Terms and Condition | Flyyo Luxury Aviation",
-  description: "Terms and conditions, passenger guidelines, luggage limits, and cancellation policies for Flyyo private charters and airplane joyrides.",
+  title: "Terms and Condition | AeroLux Concept Prototype",
+  description: "Terms and conditions, passenger guidelines, luggage limits, and cancellation policies for AeroLux private charters and airplane joyride prototypes.",
 };
 
 export default function TermsAndConditionPage() {
@@ -22,31 +22,38 @@ export default function TermsAndConditionPage() {
 
         {/* Title */}
         <div className="space-y-4 pb-8 border-b border-zinc-200">
-          <div className="text-[10px] uppercase font-bold tracking-[0.3em] text-zinc-500 flex items-center gap-2">
-            <FileText size={14} className="text-black" /> Legal & Operations
-          </div>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900">
             Terms and Condition.
           </h1>
           <p className="text-zinc-600 text-sm font-medium">
-            Effective Date: January 1, 2024 • Last Updated: 2024 • Flyyo Aviation
+            Effective Date: January 1, 2026 • Concept Design Prototype by hxrshrathore • AeroLux Aviation
+          </p>
+        </div>
+
+        {/* Prototype Banner */}
+        <div className="my-8 p-6 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 text-xs leading-relaxed space-y-2">
+          <div className="flex items-center gap-2 font-bold uppercase tracking-wider text-amber-800">
+            <AlertTriangle size={15} /> Prototype Demonstration Notice
+          </div>
+          <p>
+            AeroLux is a conceptual UI/UX design prototype created by <strong>hxrshrathore</strong>. These terms illustrate standard aviation charter contractual terminology for portfolio and UX showcase purposes. No actual commercial transactions or flight contracts are executed through this site.
           </p>
         </div>
 
         {/* Body Text */}
-        <div className="prose prose-zinc max-w-none pt-10 space-y-10 text-sm leading-relaxed text-zinc-700">
+        <div className="prose prose-zinc max-w-none pt-2 space-y-10 text-sm leading-relaxed text-zinc-700">
           
           <section className="space-y-3">
             <h2 className="text-xl font-bold text-zinc-900">1. Acceptance of Terms</h2>
             <p>
-              By accessing the Flyyo website (flyyo.co.in), submitting a charter query, or booking a private plane joyride, private jet flight, pilgrimage charter, or medical evacuation, you agree to comply with and be bound by these Terms and Conditions and all applicable regulations enforced by the Directorate General of Civil Aviation (DGCA) and the Ministry of Civil Aviation, Government of India.
+              By accessing the AeroLux design prototype (aerolux.design), submitting a charter query, or exploring private plane joyrides, private jet flights, pilgrimage charters, or medical evacuations, you agree to comply with and be bound by these Terms and Conditions and all applicable regulations enforced by the Directorate General of Civil Aviation (DGCA) and the Ministry of Civil Aviation, Government of India.
             </p>
           </section>
 
           <section className="space-y-3">
             <h2 className="text-xl font-bold text-zinc-900">2. Charter Quotations & Booking Confirmation</h2>
             <p>
-              All charter flights, joyrides, and aviation packages are subject to aircraft availability, crew duty time limitations (FDTL), and slot clearances from airport authorities and the DGCA. A charter flight or joyride slot is deemed confirmed only upon receipt of the agreed deposit or full charter fee and subsequent issuance of an official Flyyo Flight Itinerary Confirmation.
+              All charter flights, joyrides, and aviation packages are subject to aircraft availability, crew duty time limitations (FDTL), and slot clearances from airport authorities and the DGCA. A charter flight or joyride slot is deemed confirmed only upon receipt of the agreed deposit or full charter fee and subsequent issuance of an official AeroLux Flight Itinerary Confirmation.
             </p>
           </section>
 
@@ -72,7 +79,7 @@ export default function TermsAndConditionPage() {
           <section className="space-y-3">
             <h2 className="text-xl font-bold text-zinc-900">5. Weather, Air Traffic & Force Majeure</h2>
             <p>
-              Passenger safety is Flyyo&apos;s non-negotiable priority. Flight departures, routings, or helicopter transfers may be altered, delayed, or rescheduled due to adverse weather conditions, NOTAMs, VIP movement, or air traffic control directives. In such events, Flyyo will endeavor to reschedule the flight or provide alternative travel options. Flyyo cannot be held liable for consequential damages arising from unforeseen force majeure circumstances.
+              Passenger safety is AeroLux&apos;s non-negotiable priority. Flight departures, routings, or helicopter transfers may be altered, delayed, or rescheduled due to adverse weather conditions, NOTAMs, VIP movement, or air traffic control directives. In such events, AeroLux will endeavor to reschedule the flight or provide alternative travel options.
             </p>
           </section>
 
@@ -89,9 +96,9 @@ export default function TermsAndConditionPage() {
               These Terms and Conditions shall be governed by and construed in accordance with the laws of the Republic of India. Any legal proceedings shall be subject to the exclusive jurisdiction of the courts of Mumbai, Maharashtra.
             </p>
             <div className="bg-zinc-50 border border-zinc-200 rounded-2xl p-6 mt-4 space-y-2 text-xs">
-              <p><strong>Flyyo Aviation</strong></p>
-              <p>Juhu Airport, Juhu Tara Road, Airport Area, Juhu, Mumbai, Maharashtra, India</p>
-              <p>Email: <a href="mailto:flyyo.in@gmail.com" className="underline">flyyo.in@gmail.com</a> | Phone: +91 95118 26428</p>
+              <p><strong>AeroLux Aviation — Design Prototype</strong></p>
+              <p>Concept Base: Juhu Airport, Juhu Tara Road, Airport Area, Juhu, Mumbai, Maharashtra, India</p>
+              <p>Email: <a href="mailto:concierge@aerolux.design" className="underline">concierge@aerolux.design</a> | Designed by: hxrshrathore</p>
             </div>
           </section>
 

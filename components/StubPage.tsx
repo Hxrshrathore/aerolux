@@ -15,9 +15,6 @@ export default function StubPage({
   return (
     <main className="min-h-screen bg-white flex flex-col items-center justify-center px-6 text-center">
       <div className="max-w-lg space-y-6">
-        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-400">
-          {siteConfig.name}
-        </p>
         <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-zinc-900 leading-none">
           {title}
         </h1>

@@ -13,7 +13,7 @@ import {
 import Counter from "@/components/Counter"
 import { LoginPortalCard } from "@/components/LoginPortalCard"
 
-function FlyyoLogo({ className = "h-10 w-10", color = "currentColor" }: { className?: string, color?: string }) {
+function AeroLuxLogo({ className = "h-10 w-10", color = "currentColor" }: { className?: string, color?: string }) {
   return (
     <svg
       width="1016"
@@ -91,16 +91,16 @@ export default function LoginPage() {
           className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/15 text-xs sm:text-sm font-semibold text-zinc-200 hover:text-white transition-all cursor-pointer group shadow-sm"
         >
           <ArrowLeft size={16} className="transition-transform group-hover:-translate-x-1" />
-          <span>Return to Flyyo</span>
+          <span>Return to AeroLux</span>
         </Link>
 
         {/* Brand Combo: SVG Logo on top and SkyClub below in Navbar CTA typography */}
         <Link 
           href="/" 
           className="group flex flex-col items-center justify-center no-underline transition-transform hover:scale-105"
-          title="Flyyo SkyClub"
+          title="AeroLux SkyClub"
         >
-          <FlyyoLogo className="h-9 w-9 sm:h-10 sm:w-10 text-white transition-transform group-hover:scale-105" color="#ffffff" />
+          <AeroLuxLogo className="h-9 w-9 sm:h-10 sm:w-10 text-white transition-transform group-hover:scale-105" color="#ffffff" />
           <span className="text-[14px] sm:text-[15px] font-medium tracking-tight antialiased text-white mt-1.5 leading-none">
             SkyClub
           </span>

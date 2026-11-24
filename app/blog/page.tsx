@@ -18,7 +18,7 @@ const posts = [
   {
     slug: "empty-leg-flights-india",
     title: "Demystifying Empty Leg Flights: How to Fly Private in India at Up to 75% Off",
-    excerpt: "What are empty legs, how does the Flyyo Community get first access to them, and how you can book spontaneous luxury private jet routes.",
+    excerpt: "What are empty legs, how does the AeroLux Community get first access to them, and how you can book spontaneous luxury private jet routes.",
     category: "Charter Secrets",
     date: "Feb 15, 2025",
     readTime: "6 min read",
@@ -35,7 +35,7 @@ const posts = [
   },
   {
     slug: "air-ambulance-critical-care-standards",
-    title: "Inside Flyyo Air Ambulance: Flying Intensive Care Units Saving Lives Across India",
+    title: "Inside AeroLux Air Ambulance: Flying Intensive Care Units Saving Lives Across India",
     excerpt: "How aeromedical crews, rapid clearance protocols, and pressurized jet cabins make all the difference in urgent critical patient transfers.",
     category: "Air Ambulance",
     date: "Jan 12, 2025",
@@ -54,7 +54,7 @@ const posts = [
   {
     slug: "luxury-cabin-interior-amenities",
     title: "The Art of Bespoke In-Flight Hospitality: From Fine Dining to Lie-Flat Suites",
-    excerpt: "Explore how Flyyo curates customized culinary menus, acoustic tranquility, and tailored VIP care at 45,000 feet.",
+    excerpt: "Explore how AeroLux curates customized culinary menus, acoustic tranquility, and tailored VIP care at 45,000 feet.",
     category: "Luxury Living",
     date: "Dec 5, 2024",
     readTime: "4 min read",
@@ -68,14 +68,6 @@ export default function BlogPage() {
       {/* Header */}
       <section className="px-6 max-w-7xl mx-auto mb-16">
         <div className="space-y-4 max-w-2xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-500 flex items-center gap-2"
-          >
-            <Plane size={14} className="text-black" />
-            Flyyo Aviation Insights
-          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

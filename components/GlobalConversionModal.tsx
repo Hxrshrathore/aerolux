@@ -106,7 +106,7 @@ export function GlobalConversionModal({ isOpen, onClose, preSelectedCharter, mod
               <div className="space-y-6">
                 <div className="space-y-2 pr-8">
                   <div className="text-[10px] uppercase font-bold tracking-[0.25em] text-emerald-600 flex items-center gap-1.5">
-                    <Plane size={13} /> Flyyo Aviation Desk
+                    <Plane size={13} /> AeroLux Aviation Desk
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900">{title}</h3>
                   <p className="text-xs sm:text-sm text-zinc-500 font-medium">{subtitle}</p>
@@ -182,7 +182,7 @@ export function GlobalConversionModal({ isOpen, onClose, preSelectedCharter, mod
                       <input
                         required
                         type="tel"
-                        placeholder="+91 95118 26428"
+                        placeholder="+91 98765 43210"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full mt-1 bg-zinc-50 border border-zinc-200 rounded-xl p-3.5 text-xs sm:text-sm font-medium outline-none focus:ring-2 focus:ring-black"
@@ -210,7 +210,7 @@ export function GlobalConversionModal({ isOpen, onClose, preSelectedCharter, mod
                   </button>
 
                   <p className="text-[10px] text-center text-zinc-400 font-medium">
-                    Direct operations line: +91 95118 26428 • Juhu Airport, Mumbai
+                    Direct operations line: +91 98765 43210 • Juhu Airport, Mumbai
                   </p>
                 </form>
               </div>

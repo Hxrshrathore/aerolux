@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Sparkles, Plane, MapPin, Clock, ShieldCheck, Heart, Award, ArrowRight, MessageCircle, Calendar } from "lucide-react";
+import { Sparkles, Plane, MapPin, Clock, ShieldCheck, Heart, Award, ArrowRight, Calendar } from "lucide-react";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { BookingSection } from "@/components/BookingSection";
 import { CommunityBanner } from "@/components/CommunityBanner";
 
 export const metadata: Metadata = {
   title: "Airplane Joyride Mumbai | Book a Private Plane Joyride",
-  description: "Elevate your sense of adventure with exhilarating airplane joyrides over Mumbai with Flyyo. Panoramic views, anniversary specials & sunset flights from Juhu Airport.",
+  description: "Elevate your sense of adventure with exhilarating airplane joyrides over Mumbai with AeroLux. Panoramic views, anniversary specials & sunset flights from Juhu Airport.",
 };
 
 const joyridePackages = [
@@ -55,10 +56,6 @@ export default function AirplaneJoyridePage() {
           </div>
 
           <div className="relative z-10 max-w-3xl space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 border border-amber-500/40 text-xs font-bold uppercase tracking-widest text-amber-300">
-              <Sparkles size={14} className="fill-amber-300" /> Book a Private Plane Joyride
-            </div>
-
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight leading-[0.95] uppercase">
               Airplane Joyrides <br />
               Above The Clouds.
@@ -77,12 +74,12 @@ export default function AirplaneJoyridePage() {
               </a>
 
               <a
-                href="https://wa.me/919511826428?text=Hi%20Flyyo%2C%20I%20want%20to%20book%20an%20Airplane%20Joyride%20at%20Juhu%20Airport."
+                href="https://wa.me/919876543210?text=Hi%20AeroLux%2C%20I%20want%20to%20book%20an%20Airplane%20Joyride%20at%20Juhu%20Airport."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 bg-[#25D366] text-black font-black text-xs uppercase tracking-widest px-8 py-4 rounded-full hover:bg-[#1ebd5a] transition-all"
               >
-                <MessageCircle size={17} className="fill-black" /> Book on WhatsApp
+                <WhatsAppIcon size={17} className="shrink-0" /> Book on WhatsApp
               </a>
             </div>
           </div>
@@ -121,9 +118,6 @@ export default function AirplaneJoyridePage() {
       {/* Joyride Packages */}
       <section id="packages" className="px-6 max-w-7xl mx-auto mb-24">
         <div className="text-center mb-14 space-y-3">
-          <span className="text-[10px] uppercase font-bold tracking-[0.3em] text-zinc-500">
-            Select Your Flight
-          </span>
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-900">
             Curated Joyride Experiences.
           </h2>
@@ -161,7 +155,7 @@ export default function AirplaneJoyridePage() {
 
               <div className="pt-8">
                 <a
-                  href={`https://wa.me/919511826428?text=Hi%20Flyyo%2C%20I%20would%20like%20to%20book%20the%20${encodeURIComponent(pkg.name)}%20Joyride.`}
+                  href={`https://wa.me/919876543210?text=Hi%20AeroLux%2C%20I%20would%20like%20to%20book%20the%20${encodeURIComponent(pkg.name)}%20Joyride.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-black text-white py-4 rounded-xl text-xs font-bold uppercase tracking-widest hover:bg-zinc-800 transition-all flex items-center justify-center gap-2 shadow-md"

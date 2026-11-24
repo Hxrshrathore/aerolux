@@ -14,13 +14,13 @@ import {
   Bell, 
   ShieldCheck, 
   CheckCircle2, 
-  MessageCircle, 
   Flame,
   Info,
   Calendar,
   X
 } from "lucide-react"
 import { siteConfig } from "@/lib/config"
+import { WhatsAppIcon } from "./WhatsAppIcon"
 
 export interface EmptyLegFlight {
   id: string
@@ -219,7 +219,7 @@ export function EmptyLegSection() {
 
   const getWhatsAppBookingLink = (flight: EmptyLegFlight) => {
     const text = encodeURIComponent(
-      `Hello Flyyo! I am interested in booking the Empty Leg flight:\n\n✈️ Route: ${flight.originCity} (${flight.originCode}) ➔ ${flight.destCity} (${flight.destCode})\n📅 Date: ${flight.date} (${flight.departureTimeWindow})\n🛩️ Aircraft: ${flight.aircraftName} (${flight.capacity} Pax)\n💰 Offer Price: ${flight.emptyLegPrice} (Save ${flight.savingsPercent}%)\n\nPlease confirm availability and booking procedure.`
+      `Hello AeroLux! I am interested in booking the Empty Leg flight:\n\n✈️ Route: ${flight.originCity} (${flight.originCode}) ➔ ${flight.destCity} (${flight.destCode})\n📅 Date: ${flight.date} (${flight.departureTimeWindow})\n🛩️ Aircraft: ${flight.aircraftName} (${flight.capacity} Pax)\n💰 Offer Price: ${flight.emptyLegPrice} (Save ${flight.savingsPercent}%)\n\nPlease confirm availability and booking procedure.`
     )
     return `https://wa.me/${siteConfig.contact.whatsapp}?text=${text}`
   }
@@ -233,14 +233,6 @@ export function EmptyLegSection() {
       {/* Section Header */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
         <div className="space-y-4 max-w-2xl">
-          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 text-[11px] font-bold tracking-widest uppercase">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-            Live Radar • Up to 75% Off Private Jet Routes
-          </div>
-
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-950">
             Empty Leg <span className="font-serif italic font-normal text-zinc-500">Alerts & Flights.</span>
           </h2>
@@ -429,7 +421,7 @@ export function EmptyLegSection() {
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#1ebd5a] text-black font-extrabold text-xs uppercase tracking-wider shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer"
                 >
-                  <MessageCircle size={16} className="fill-black" />
+                  <WhatsAppIcon size={16} className="shrink-0" />
                   Claim Route via WhatsApp
                 </a>
 
@@ -454,7 +446,7 @@ export function EmptyLegSection() {
           </div>
           <h4 className="font-bold text-base text-zinc-900">Why so affordable?</h4>
           <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
-            Empty leg flights occur when an aircraft needs to reposition after dropping off passengers. Rather than flying empty, Flyyo offers the flight at deep operational discounts.
+            Empty leg flights occur when an aircraft needs to reposition after dropping off passengers. Rather than flying empty, AeroLux offers the flight at deep operational discounts.
           </p>
         </div>
 
@@ -671,7 +663,7 @@ export function EmptyLegSection() {
                     rel="noopener noreferrer"
                     className="flex-1 py-3.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#1ebd5a] text-black font-black text-xs uppercase tracking-wider text-center flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md"
                   >
-                    <MessageCircle size={16} className="fill-black" />
+                    <WhatsAppIcon size={16} className="shrink-0" />
                     Book Instantly on WhatsApp
                   </a>
 

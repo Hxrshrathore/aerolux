@@ -1,4 +1,4 @@
-import AboutFlyyoPage, { metadata } from "../about-flyyo/page";
+import AboutAeroLuxPage, { metadata } from "../about-aerolux/page";
 
 export { metadata };
-export default AboutFlyyoPage;
+export default AboutAeroLuxPage;

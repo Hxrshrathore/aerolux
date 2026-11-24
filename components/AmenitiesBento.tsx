@@ -3,25 +3,25 @@
 import { motion } from "motion/react"
 import { Sparkles, DollarSign, Crown, Clock, Plane, ShieldCheck, HeartHandshake } from "lucide-react"
 
-const whyFlyyoReasons = [
+const whyAeroLuxReasons = [
   {
     icon: <DollarSign size={24} />,
     title: "Best Deals",
-    desc: "At Flyyo, we believe luxury should be accessible to all. That's why we offer competitive pricing and exclusive deals on all our services, ensuring you receive exceptional value without compromising on quality.",
+    desc: "At AeroLux, we believe luxury should be accessible to all. That's why we offer competitive pricing and exclusive deals on all our services, ensuring you receive exceptional value without compromising on quality.",
     size: "lg",
     highlight: "Value & Transparency"
   },
   {
     icon: <Crown size={24} />,
     title: "High-End Luxury Experience",
-    desc: "Indulge in the lap of luxury with Flyyo's unparalleled service standards and attention to detail. From gourmet catering to personalized concierge services, every aspect of your journey is meticulously curated for an unforgettable experience.",
+    desc: "Indulge in the lap of luxury with AeroLux's unparalleled service standards and attention to detail. From gourmet catering to personalized concierge services, every aspect of your journey is meticulously curated for an unforgettable experience.",
     size: "lg",
     highlight: "VIP Personalized Care"
   },
   {
     icon: <Clock size={24} />,
     title: "Unmatched Convenience",
-    desc: "With Flyyo, travel becomes effortless and stress-free, allowing you to focus on what truly matters. Skip security lines, arrive 15 minutes before takeoff, and fly on your exact schedule.",
+    desc: "With AeroLux, travel becomes effortless and stress-free, allowing you to focus on what truly matters. Skip security lines, arrive 15 minutes before takeoff, and fly on your exact schedule.",
     size: "md",
     highlight: "15-Min Boarding"
   },
@@ -50,11 +50,10 @@ const whyFlyyoReasons = [
 
 export function AmenitiesBento() {
   return (
-    <section id="why-flyyo" className="py-24 px-6 max-w-7xl mx-auto">
+    <section id="why-aerolux" className="py-24 px-6 max-w-7xl mx-auto">
       <div className="text-center mb-16 space-y-4">
-        <div className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-600">The Flyyo Advantage</div>
         <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-zinc-900">
-          Why <span className="font-serif italic font-normal text-zinc-500">Flyyo?</span>
+          Why <span className="font-serif italic font-normal text-zinc-500">AeroLux?</span>
         </h2>
         <p className="text-zinc-600 max-w-xl mx-auto text-sm sm:text-base font-medium">
           Elevating private air charter standards across India with unmatched luxury, price integrity, and total convenience.
@@ -62,7 +61,7 @@ export function AmenitiesBento() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px]">
-        {whyFlyyoReasons.map((item, idx) => (
+        {whyAeroLuxReasons.map((item, idx) => (
           <motion.div
             key={idx}
             initial={{ opacity: 0, scale: 0.95 }}

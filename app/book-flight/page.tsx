@@ -6,7 +6,7 @@ import { CommunityBanner } from "@/components/CommunityBanner";
 
 export const metadata: Metadata = {
   title: "Book Flight & Joyride",
-  description: "Book your private jet flight, airplane joyride, pilgrimage charter, or air ambulance with Flyyo. 30+ aircrafts ready for immediate departure.",
+  description: "Book your private jet flight, airplane joyride, pilgrimage charter, or air ambulance with AeroLux. 30+ aircrafts ready for immediate departure.",
 };
 
 export default function BookFlightPage() {

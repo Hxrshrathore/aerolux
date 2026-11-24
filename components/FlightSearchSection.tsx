@@ -20,7 +20,6 @@ import {
   Clock, 
   ShieldCheck, 
   Flame, 
-  MessageCircle, 
   ArrowRight, 
   Luggage, 
   Zap,
@@ -32,6 +31,7 @@ import {
   ArrowUpRight
 } from "lucide-react"
 import { siteConfig } from "@/lib/config"
+import { WhatsAppIcon } from "./WhatsAppIcon"
 
 export interface AirportOption {
   code: string
@@ -555,7 +555,7 @@ export function FlightSearchSection({ className = "", hideTopBanner = false }: F
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
             <span>
-              Celebrating <strong>30+ Fleet Aircraft</strong> at Flyyo. Dedicated VIP FBO lounges &amp; 15-min tarmac boarding.
+              Celebrating <strong>30+ Fleet Aircraft</strong> at AeroLux. Dedicated VIP FBO lounges &amp; 15-min tarmac boarding.
             </span>
           </div>
           <Link
@@ -1214,7 +1214,7 @@ export function FlightSearchSection({ className = "", hideTopBanner = false }: F
                       payMode === "miles" ? "bg-white text-zinc-950 shadow-sm" : "text-zinc-600 hover:text-zinc-950"
                     }`}
                   >
-                    Flyyo SkyClub + Cash
+                    AeroLux SkyClub + Cash
                   </button>
                 </div>
               </div>
@@ -1402,7 +1402,7 @@ export function FlightSearchSection({ className = "", hideTopBanner = false }: F
                 </div>
 
                 <a
-                  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hello%20Flyyo%2C%20I%20want%20to%20instant%20book%20Empty%20Leg%20${el.id}%20from%20${el.fromCity}%20to%20${el.toCity}%20at%20${el.dealPrice}.`}
+                  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hello%20AeroLux%2C%20I%20want%20to%20instant%20book%20Empty%20Leg%20${el.id}%20from%20${el.fromCity}%20to%20${el.toCity}%20at%20${el.dealPrice}.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3 rounded-xl bg-black hover:bg-zinc-800 text-white font-bold text-xs uppercase tracking-widest text-center transition-colors block cursor-pointer shadow-sm"
@@ -1520,12 +1520,12 @@ export function FlightSearchSection({ className = "", hideTopBanner = false }: F
                       </div>
 
                       <a
-                        href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hi%20Flyyo%2C%20I%20am%20inquiring%20about%20chartering%20the%20${encodeURIComponent(aircraft.name)}%20from%20${fromAirport.city}%20(${fromAirport.code})%20to%20${toAirport.city}%20(${toAirport.code})%20on%20${departureDate}%20for%20${passengers}%20Passengers.`}
+                        href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hi%20AeroLux%2C%20I%20am%20inquiring%20about%20chartering%20the%20${encodeURIComponent(aircraft.name)}%20from%20${fromAirport.city}%20(${fromAirport.code})%20to%20${toAirport.city}%20(${toAirport.code})%20on%20${departureDate}%20for%20${passengers}%20Passengers.`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl bg-[#25D366] hover:bg-[#1ebd5a] text-black text-[14px] sm:text-[15px] font-medium tracking-tight antialiased transition-all duration-200 shadow-sm cursor-pointer"
                       >
-                        <MessageCircle size={16} className="fill-black shrink-0" />
+                        <WhatsAppIcon size={16} className="shrink-0" />
                         <span>Book this aircraft on WhatsApp</span>
                       </a>
                     </div>
@@ -1618,7 +1618,7 @@ export function FlightSearchSection({ className = "", hideTopBanner = false }: F
                     <span className="text-[10px] uppercase font-bold tracking-widest text-zinc-600 bg-zinc-200 px-2 py-0.5 rounded-full">
                       Promo Code
                     </span>
-                    <h4 className="font-bold text-sm text-zinc-900">Code: FLYYOSKYCLUB</h4>
+                    <h4 className="font-bold text-sm text-zinc-900">Code: AEROLUXSKYCLUB</h4>
                     <p className="text-xs text-zinc-600 leading-relaxed">
                       Get ₹25,000 credit towards catering and ground limousine services on your first intercity private jet flight.
                     </p>
@@ -1628,12 +1628,12 @@ export function FlightSearchSection({ className = "", hideTopBanner = false }: F
 
               <div className="pt-6 border-t border-zinc-100">
                 <a
-                  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hi%20Flyyo%2C%20please%20send%20me%20your%20latest%20charter%20deals%20and%20offers.`}
+                  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hi%20AeroLux%2C%20please%20send%20me%20your%20latest%20charter%20deals%20and%20offers.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl bg-zinc-950 text-white text-[14px] sm:text-[15px] font-medium tracking-tight antialiased hover:bg-zinc-800 transition-colors cursor-pointer border border-zinc-900/10"
                 >
-                  <MessageCircle size={16} />
+                  <WhatsAppIcon size={16} className="shrink-0" />
                   <span>Chat with Charter Specialist</span>
                 </a>
               </div>

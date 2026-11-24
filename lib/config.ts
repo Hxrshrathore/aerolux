@@ -1,29 +1,33 @@
 export const siteConfig = {
-  name: "Flyyo",
+  name: "AeroLux",
+  brandName: "AeroLux Aviation",
   slogan: "Redefining Luxury For You",
   headline: "30+ Aircrafts to Give you the Joy of Flying",
-  url: "https://flyyo.co.in",
-  description: "Flyyo is India's premier private aviation platform offering bespoke private jet charters, airplane joyrides, pilgrimage yatra flights, air ambulance services, and turnkey airborne corporate solutions.",
+  url: "https://aerolux.design",
+  description: "AeroLux is a conceptual luxury private aviation UI/UX design prototype created by hxrshrathore, featuring private jet charters, airplane joyrides, pilgrimage yatra flights, air ambulance services, and turnkey airborne corporate solutions.",
+  designer: "hxrshrathore",
+  isPrototype: true,
+  disclaimer: "AeroLux is an independent design portfolio prototype created by hxrshrathore. It is not an official commercial aviation business. No real flights, bookings, or financial transactions are conducted on this platform.",
   contact: {
-    email: "flyyo.in@gmail.com",
-    phone: "+91 95118 26428",
-    phoneRaw: "+919511826428",
-    whatsapp: "919511826428",
-    whatsappLink: "https://wa.me/919511826428",
-    communityWhatsapp: "https://chat.whatsapp.com/IVHW93LqNxqLW3ZlbVOWdz",
+    email: "concierge@aerolux.design",
+    phone: "+91 98765 43210",
+    phoneRaw: "+919876543210",
+    whatsapp: "919876543210",
+    whatsappLink: "https://wa.me/919876543210",
+    communityWhatsapp: "https://wa.me/919876543210?text=Hi%20AeroLux%2C%20I%20want%20to%20join%20the%20VIP%20AeroLux%20Community.",
   },
   socials: {
-    instagram: "https://instagram.com/flyyo_aviation",
-    linkedin: "https://linkedin.com/company/flyyo",
-    twitter: "https://twitter.com/flyyo_in",
-    whatsapp: "https://wa.me/919511826428",
+    instagram: "https://instagram.com/aerolux_design",
+    linkedin: "https://linkedin.com/in/hxrshrathore",
+    twitter: "https://twitter.com/hxrshrathore",
+    whatsapp: "https://wa.me/919876543210",
   },
   logo: {
     url: "/assets/images/hero-jet.jpg",
   },
   address: "Juhu Airport, Juhu Tara Road, Airport Area, Juhu, Mumbai, Maharashtra, India",
   established: 2024,
-  copyrightYear: 2024,
+  copyrightYear: 2026,
 
   // ─── Mega Navigation ───
   navigation: [
@@ -56,7 +60,7 @@ export const siteConfig = {
             { label: "Book a Private Plane Joyride", href: "/airplane-joyride" },
             { label: "Mumbai Skyline Flight", href: "/airplane-joyride#skyline" },
             { label: "Ek Dham Yatra Charters", href: "/ek-dham-yatra" },
-            { label: "Charter Deals & Community", href: "https://chat.whatsapp.com/IVHW93LqNxqLW3ZlbVOWdz" },
+            { label: "Charter Deals & Community", href: "https://wa.me/919876543210?text=Hi%20AeroLux%2C%20I%20want%20to%20join%20the%20VIP%20AeroLux%20Community." },
           ],
         },
       ],
@@ -68,7 +72,7 @@ export const siteConfig = {
         {
           title: "Aviation Consulting & Fleet",
           links: [
-            { label: "Airborne Solutions by Flyyo", href: "/#solutions" },
+            { label: "Airborne Solutions by AeroLux", href: "/#solutions" },
             { label: "Aircraft Sales", href: "/#solutions" },
             { label: "Aircraft Maintenance", href: "/#solutions" },
             { label: "Flight Operations", href: "/#solutions" },
@@ -80,12 +84,12 @@ export const siteConfig = {
     },
     {
       label: "About & Contact",
-      href: "/about-flyyo",
+      href: "/about-aerolux",
       sections: [
         {
-          title: "Flyyo Aviation",
+          title: "AeroLux Aviation",
           links: [
-            { label: "About Flyyo", href: "/about-flyyo" },
+            { label: "About AeroLux", href: "/about-aerolux" },
             { label: "Contact Us", href: "/contact-us" },
             { label: "Blog", href: "/blog" },
             { label: "Terms and Conditon", href: "/terms-and-conditon" },
@@ -102,7 +106,7 @@ export const siteConfig = {
     { label: "Airplane Joyride", href: "/airplane-joyride" },
     { label: "Ek Dham Yatra", href: "/ek-dham-yatra" },
     { label: "Blog", href: "/blog" },
-    { label: "About Flyyo", href: "/about-flyyo" },
+    { label: "About AeroLux", href: "/about-aerolux" },
     { label: "Contact Us", href: "/contact-us" },
     { label: "Terms and Conditon", href: "/terms-and-conditon" },
   ],

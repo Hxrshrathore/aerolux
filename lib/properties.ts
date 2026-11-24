@@ -36,7 +36,7 @@ export const properties: CharterOffering[] = [
     specs: { beds: "4 - 16 Pax", area: "3,800 nm Range", speed: "850 km/h", crew: "2 Pilots + Flight Attendant" },
     image: "/assets/images/hero-jet.jpg",
     category: "Private Jets",
-    description: "Experience the epitome of luxury with our bespoke private jet services. From personalized itineraries to exclusive in-flight amenities, we ensure that every aspect of your journey is perfectly tailored—Book Private Jet Flight Now With Flyyo.",
+    description: "Experience the epitome of luxury with our bespoke private jet services. From personalized itineraries to exclusive in-flight amenities, we ensure that every aspect of your journey is perfectly tailored—Book Private Jet Flight Now With AeroLux.",
     features: [
       "Bespoke Flight Itineraries",
       "VIP Private Terminals (FBO Access)",
@@ -64,7 +64,7 @@ export const properties: CharterOffering[] = [
     specs: { beds: "2 - 6 Pax", area: "30 - 60 Min Tour", speed: "Scenic Cruise", crew: "Senior Commercial Pilot" },
     image: "/assets/images/joyride-scenic.jpg",
     category: "Joyrides",
-    description: "Elevate your sense of adventure with our exhilarating joyrides that offer breathtaking views from above. Whether you're celebrating a special occasion or simply craving an unforgettable experience, our joyrides promise moments of pure delight and wonder. Book Flyyo Joyride Now!",
+    description: "Elevate your sense of adventure with our exhilarating joyrides that offer breathtaking views from above. Whether you're celebrating a special occasion or simply craving an unforgettable experience, our joyrides promise moments of pure delight and wonder. Book AeroLux Joyride Now!",
     features: [
       "Panoramic Skyline & Coastal Views",
       "Celebration Cakes & Photo Packages",
@@ -79,7 +79,7 @@ export const properties: CharterOffering[] = [
       "/assets/images/cabin-interior.jpg"
     ],
     aircraftType: "Cessna 172 / Diamond DA42 / Beechcraft King Air",
-    ctaText: "Book Flyyo Joyride Now",
+    ctaText: "Book AeroLux Joyride Now",
     ctaLink: "/airplane-joyride"
   },
   {
@@ -148,7 +148,7 @@ export const properties: CharterOffering[] = [
     specs: { beds: "1 Patient + 3 Attendants", area: "ICU On Wings", speed: "High-Speed Medevac", crew: "ICU Doctor + Flight Nurse + Pilots" },
     image: "/assets/images/air-ambulance.jpg",
     category: "Air Ambulance",
-    description: "In times of medical emergencies, trust Flyyo's Air Ambulance Charters to provide swift and reliable transportation for critical care patients. Our dedicated team ensures safe and efficient medical evacuations with utmost professionalism and compassion.",
+    description: "In times of medical emergencies, trust AeroLux's Air Ambulance Charters to provide swift and reliable transportation for critical care patients. Our dedicated team ensures safe and efficient medical evacuations with utmost professionalism and compassion.",
     features: [
       "Full On-Board ICU Setup (Ventilator, Defibrillator)",
       "Bed-to-Bed Transfer with Ground Ambulances",

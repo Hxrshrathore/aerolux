@@ -23,17 +23,19 @@ export const metadata: Metadata = {
   },
   description: `${siteConfig.name}: ${siteConfig.headline}. ${siteConfig.description}`,
   keywords: [
-    'Flyyo',
-    'private jet charter India',
+    'AeroLux',
+    'AeroLux Aviation',
+    'hxrshrathore design prototype',
+    'private jet charter India concept',
     'airplane joyride Mumbai',
     'book private plane joyride',
-    'Juhu Airport private jet',
-    'air ambulance India',
+    'Juhu Airport private jet design',
+    'air ambulance India concept',
     'pilgrimage charter Ek Dham Yatra',
-    'luxury private flight',
+    'luxury private flight UI UX',
     'group aircraft charter',
     'aircraft sales and maintenance',
-    'Flyyo community flight deals',
+    'AeroLux design prototype',
   ],
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
@@ -62,9 +64,9 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `${siteConfig.name} — ${siteConfig.slogan}`,
-    description: `${siteConfig.headline} — Book your private jet flight and joyride now with Flyyo.`,
+    description: `${siteConfig.headline} — Concept private aviation design prototype by hxrshrathore.`,
     images: ['/assets/images/hero-jet.jpg'],
-    creator: '@flyyo_in',
+    creator: '@hxrshrathore',
   },
   robots: {
     index: true,
@@ -82,7 +84,7 @@ export const metadata: Metadata = {
   },
 };
 
-// JSON-LD Structured Data for Flyyo Luxury Aviation
+// JSON-LD Structured Data for AeroLux Luxury Aviation Prototype
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TravelAgency',

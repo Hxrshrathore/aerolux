@@ -50,13 +50,6 @@ export default function CareersPage() {
       {/* Hero */}
       <section className="px-6 max-w-7xl mx-auto mb-24">
         <div className="max-w-3xl space-y-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-500"
-          >
-            Careers
-          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -94,14 +87,6 @@ export default function CareersPage() {
 
       {/* Open Positions */}
       <section className="px-6 max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-500 mb-4"
-        >
-          Open Positions
-        </motion.div>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

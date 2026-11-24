@@ -7,6 +7,7 @@ import { Calendar, Clock, User, Phone, Mail, MapPin, Users, ArrowRight, CheckCir
 
 import { gsap } from "gsap"
 import { TrustBar } from "./TrustBar"
+import { WhatsAppIcon } from "./WhatsAppIcon"
 
 type TripType = "charter" | "joyride" | "ambulance" | "pilgrimage"
 
@@ -504,7 +505,7 @@ export function BookingSection({ showTrustBar = true, isHero = false, className 
                                 <input
                                   required
                                   type="tel"
-                                  placeholder="+91 95118 26428"
+                                  placeholder="+91 98765 43210"
                                   value={formData.phone}
                                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                   className="w-full bg-zinc-50/90 border border-zinc-200/90 rounded-lg py-1.5 sm:py-2 pl-6 sm:pl-7 pr-2 focus:ring-1.5 focus:ring-zinc-900 focus:bg-white transition-all text-xs text-zinc-900 placeholder:text-zinc-400 font-medium outline-none shadow-xs"
@@ -521,7 +522,7 @@ export function BookingSection({ showTrustBar = true, isHero = false, className 
                                 <input
                                   required
                                   type="email"
-                                  placeholder="client@flyyo.in"
+                                  placeholder="client@aerolux.design"
                                   value={formData.email}
                                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                   className="w-full bg-zinc-50/90 border border-zinc-200/90 rounded-lg py-1.5 sm:py-2 pl-6 sm:pl-7 pr-2 focus:ring-1.5 focus:ring-zinc-900 focus:bg-white transition-all text-xs text-zinc-900 placeholder:text-zinc-400 font-medium outline-none shadow-xs"
@@ -577,11 +578,12 @@ export function BookingSection({ showTrustBar = true, isHero = false, className 
                           </div>
                           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                             <a
-                              href={`https://wa.me/919511826428?text=Hi%20Flyyo%2C%20I%20just%20submitted%20a%20charter%20query%20for%20${encodeURIComponent(formData.from)}%20to%20${encodeURIComponent(formData.to)}.`}
+                              href={`https://wa.me/919876543210?text=Hi%20AeroLux%2C%20I%20just%20submitted%20a%20charter%20query%20for%20${encodeURIComponent(formData.from)}%20to%20${encodeURIComponent(formData.to)}.`}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-[#25D366] text-black font-semibold px-5 py-2.5 rounded-full text-xs flex items-center gap-2 shadow-md hover:bg-[#1ebd5a] transition-all"
                             >
+                              <WhatsAppIcon size={16} className="shrink-0" />
                               Connect on WhatsApp Now
                             </a>
                             <button

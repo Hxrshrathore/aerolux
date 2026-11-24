@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { MapPin, Phone, Mail, Clock, MessageCircle, ArrowRight, ShieldCheck, Plane } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, ArrowRight, ShieldCheck, Plane } from "lucide-react";
 import { BookingSection } from "@/components/BookingSection";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Flyyo Luxury Aviation",
-  description: "Get in touch with Flyyo at Juhu Airport, Mumbai. Call +91 95118 26428 or message us on WhatsApp for 24/7 private jet charters and joyride bookings.",
+  title: "Contact Us | AeroLux Luxury Aviation Prototype",
+  description: "Get in touch with AeroLux at Juhu Airport, Mumbai. Call +91 98765 43210 or message on WhatsApp for 24/7 private jet charters and joyride inquiries.",
 };
 
 export default function ContactUsPage() {
@@ -13,9 +14,6 @@ export default function ContactUsPage() {
       {/* Header */}
       <section className="px-6 max-w-7xl mx-auto mb-16">
         <div className="space-y-4">
-          <div className="text-[10px] uppercase font-bold tracking-[0.3em] text-zinc-500 flex items-center gap-2">
-            <Plane size={14} className="text-black" /> Get In Touch
-          </div>
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-zinc-900 leading-tight">
             Better See you Onboard.
           </h1>
@@ -30,7 +28,7 @@ export default function ContactUsPage() {
           <div className="bg-zinc-50 rounded-3xl p-8 border border-zinc-200 flex flex-col justify-between space-y-6">
             <div className="space-y-3">
               <div className="w-12 h-12 rounded-2xl bg-[#25D366]/20 text-[#25D366] flex items-center justify-center">
-                <MessageCircle size={24} className="fill-[#25D366]" />
+                <WhatsAppIcon size={26} className="shrink-0" />
               </div>
               <h3 className="text-xl font-bold text-zinc-900">WhatsApp Flight Desk</h3>
               <p className="text-xs text-zinc-600 font-medium leading-relaxed">
@@ -38,7 +36,7 @@ export default function ContactUsPage() {
               </p>
             </div>
             <a
-              href="https://wa.me/919511826428"
+              href="https://wa.me/919876543210"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#1ea750] hover:text-[#128C7E]"
@@ -59,8 +57,8 @@ export default function ContactUsPage() {
               </p>
             </div>
             <div className="space-y-1 text-xs font-bold text-zinc-900">
-              <a href="tel:+919511826428" className="block hover:underline">+91 95118 26428</a>
-              <a href="mailto:flyyo.in@gmail.com" className="block text-zinc-600 hover:text-black">flyyo.in@gmail.com</a>
+              <a href="tel:+919876543210" className="block hover:underline">+91 98765 43210</a>
+              <a href="mailto:concierge@aerolux.design" className="block text-zinc-600 hover:text-black">concierge@aerolux.design</a>
             </div>
           </div>
 

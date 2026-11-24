@@ -14,7 +14,6 @@ export function ProjectsSection() {
   return (
     <section className="py-16 md:py-24 px-6 max-w-7xl mx-auto overflow-hidden">
       <div className="text-center mb-12 md:mb-16 space-y-4">
-        <div className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-400">Recently Completed Homes</div>
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight">A selection of newly built modular and tiny homes</h2>
       </div>
 

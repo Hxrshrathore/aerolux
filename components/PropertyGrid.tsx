@@ -27,10 +27,6 @@ export function PropertyGrid() {
     <section id="charters" className="py-24 px-6 max-w-7xl mx-auto">
       <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-12">
         <div className="space-y-4">
-          <div className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-600 flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-black" />
-            30+ Aircrafts in Our Fleet
-          </div>
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-zinc-900">
             Book a <span className="font-serif italic font-normal text-zinc-500">Private Charter</span> Today.
           </h2>

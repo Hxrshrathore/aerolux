@@ -13,7 +13,7 @@ export interface LoginPortalModalProps {
 }
 
 // Global custom event name for frictionless 1-line invocation anywhere in the app
-const OPEN_LOGIN_EVENT = 'flyyo:open-login-portal'
+const OPEN_LOGIN_EVENT = 'aerolux:open-login-portal'
 
 /**
  * Trigger the login portal modal from anywhere without prop drilling.

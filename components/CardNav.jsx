@@ -10,7 +10,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 const FluidGlass = dynamic(() => import('./FluidGlass'), { ssr: false });
 
-function FlyyoLogo({ className = "h-11 w-11", color = "currentColor" }) {
+function AeroLuxLogo({ className = "h-11 w-11", color = "currentColor" }) {
   return (
     <svg
       width="1016"
@@ -275,8 +275,8 @@ const CardNav = ({
 
           {/* Logo — centered (Dark State over daytime sky) */}
           <div className="logo-container flex items-center md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none">
-            <Link href={logoHref} aria-label="Flyyo Home" className="flex items-center justify-center transition-opacity hover:opacity-85 no-underline">
-              <FlyyoLogo className="h-12 w-12 sm:h-14 sm:w-14 scale-110 sm:scale-125 transition-transform duration-200 origin-center" color="#09090b" />
+            <Link href={logoHref} aria-label="AeroLux Home" className="flex items-center justify-center transition-opacity hover:opacity-85 no-underline">
+              <AeroLuxLogo className="h-12 w-12 sm:h-14 sm:w-14 scale-110 sm:scale-125 transition-transform duration-200 origin-center" color="#09090b" />
             </Link>
           </div>
 
@@ -338,7 +338,7 @@ const CardNav = ({
             {/* Logo — centered (White State, zoomed in) */}
             <div className="logo-container flex items-center md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none">
               <div className="flex items-center justify-center">
-                <FlyyoLogo className="h-12 w-12 sm:h-14 sm:w-14 scale-110 sm:scale-125 transition-transform duration-200 origin-center" color="#ffffff" />
+                <AeroLuxLogo className="h-12 w-12 sm:h-14 sm:w-14 scale-110 sm:scale-125 transition-transform duration-200 origin-center" color="#ffffff" />
               </div>
             </div>
 
