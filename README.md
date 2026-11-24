@@ -31,6 +31,17 @@ Imagine you need to charter a private jet on short notice, experience a romantic
 
 ---
 
+## 🎬 Prototype Walkthrough & Video Showcase
+
+Watch the **AeroLux** luxury aviation prototype in motion — exploring the 3D fluid glass navbar, cinematic video hero, interactive flight search engine, empty leg deals radar, and bespoke private aviation touchpoints:
+
+<div align="center">
+  <video src="public/assets/videos/aerolux-walkthrough.mp4" width="100%" controls playsinline></video>
+  <p><sub><em>▶️ Direct Asset Link: <a href="public/assets/videos/aerolux-walkthrough.mp4"><strong><code>public/assets/videos/aerolux-walkthrough.mp4</code></strong></a></em></sub></p>
+</div>
+
+---
+
 ## 🚀 Key Features & Experiences
 
 ### 1. 🛩️ Private Jet Charters & Empty Leg Marketplace
@@ -151,6 +162,7 @@ public/assets/
 ├── logo/
 │   └── logo.svg                    # Official AeroLux SVG geometric logo mark
 └── videos/
+    ├── aerolux-walkthrough.mp4     # Complete high-resolution UI/UX walkthrough & screen demo video
     └── bg/
         ├── herobg.mp4              # Looping 1080p aerial jet flight video for homepage hero
         └── ek-dham-hero.webm       # Cinematic Himalayan helicopter flight for Yatra page
